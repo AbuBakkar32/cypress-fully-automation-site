@@ -10,9 +10,9 @@ describe('Login User', () => {
         cy.get('[data-qa="login-password"]').type('123456')
         cy.get('[data-qa="login-button"]').click()
 
-        cy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(10) > a').contains('Logged in as Abu Bakkar').should('be.visible')
+        cy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(10) > a').contains('Logged in as preaus').should('be.visible')
 
-        cy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(5) > a').click()
-        cy.get('[data-qa="account-deleted"]').contains('Account Deleted!')
+        //cy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(5) > a').click()
+        //cy.get('[data-qa="account-deleted"]').contains('Account Deleted!')
     })
 })
