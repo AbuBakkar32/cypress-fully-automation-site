@@ -23,5 +23,5 @@ jobs:
           path: ./reports/unittest.pdf
 
       - name: Run Cypress tests
-        run: npx cypress run --record --key af8ca1ca-a0be-4fbd-b377-fb03d094d8eb
+        run: npx cypress run --record --key af8ca1ca-a0be-4fbd-b377-fb03d094d8eb --parallel
 
