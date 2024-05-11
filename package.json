@@ -1,9 +1,12 @@
 {
   "devDependencies": {
+    "@cypress/code-coverage": "^3.12.39",
     "cypress": "^13.9.0"
   },
   "scripts": {
-    "cy:open" : "cypress open",
-    "cy:run" : "cypress run"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "start": "node server",
+    "start:coverage": "nyc --silent node server"
   }
 }
