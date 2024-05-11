@@ -1,0 +1,26 @@
+name: Cypress CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v2
+        with:
+          name: pdf-file
+          path: ./reports/unittest.pdf
+
+      - name: Run Cypress tests
+        run: npx cypress run --record --key af8ca1ca-a0be-4fbd-b377-fb03d094d8eb

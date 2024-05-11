@@ -22,7 +22,7 @@ describe('Contact Us Form', () => {
         cy.get('[data-qa="message"]').type('Test Message');
 
         // Step 7: Upload file
-        const fileName = 'C:\\Users\\ABS RAKIB\\Videos\\Abu Bakkar Siddikk-CV.pdf';
+        const fileName = './reports/unittest.pdf';
         cy.get('input[type=file]').selectFile(fileName);
 
         // Step 8: Click 'Submit' button
