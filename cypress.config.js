@@ -15,7 +15,7 @@ module.exports = defineConfig({
     viewportWidth: 1000,
     waitForAnimations: true,
     watchForFileChanges: true,
-    //screenshotOnRunFailure: false,
+
     /*reporter: 'cypress-mochawesome-reporter', reporterOptions: {
         charts: true,
         reportPageTitle: 'custom-title',
@@ -28,6 +28,7 @@ module.exports = defineConfig({
     reporter: "cypress-multi-reporters",
     reporterOptions: {
         reporterEnabled: "cypress-mochawesome-reporter, mocha-junit-reporter",
+        //configFile: "cypress-reporters.json",
         mochaJunitReporterReporterOptions: {
             mochaFile: "cypress/reports/junit/results-[hash].xml"
         },
