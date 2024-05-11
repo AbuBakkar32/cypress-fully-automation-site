@@ -12,6 +12,8 @@
     "cy:cloud": "cypress run --record --key af8ca1ca-a0be-4fbd-b377-fb03d094d8eb"
   },
   "dependencies": {
+    "cypress-multi-reporters": "^1.6.4",
+    "mocha-junit-reporter": "^2.2.1",
     "mochawesome": "^7.1.3"
   }
 }
