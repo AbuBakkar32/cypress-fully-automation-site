@@ -3,7 +3,10 @@ const {beforeRunHook, afterRunHook} = require('cypress-mochawesome-reporter/lib'
 
 module.exports = defineConfig({
     screenshotsFolder: 'cypress/screenshots',
+    screenshots: true,
     videosFolder: 'cypress/videos',
+    video: true,
+    screenshotOnRunFailure: true,
     reporter: 'cypress-mochawesome-reporter', reporterOptions: {
         charts: true,
         reportPageTitle: 'custom-title',
@@ -11,8 +14,6 @@ module.exports = defineConfig({
         inlineAssets: true,
         saveAllAttempts: false,
     },
-    video: true,
-    screenshotOnRunFailure: true,
 
     env: {}, projectId: '5r89t6', e2e: {
         setupNodeEvents(on, config) {
