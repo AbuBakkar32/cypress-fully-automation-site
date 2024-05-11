@@ -8,5 +8,8 @@
     "cy:run": "cypress run",
     "start": "node server",
     "start:coverage": "nyc --silent node server"
+  },
+  "dependencies": {
+    "mochawesome": "^7.1.3"
   }
 }
