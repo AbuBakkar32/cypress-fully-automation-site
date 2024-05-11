@@ -86,6 +86,7 @@ This project is licensed under the Apache License - see the [LICENSE](https://gi
 2. Create a new job
 3. Add the following commands to the job:
 
+## Run Project In Cypress Cloud
 ```bash
 npm install
 npm cypress run --record --key [Sceret Key]
