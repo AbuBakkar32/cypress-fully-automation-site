@@ -29,7 +29,7 @@ To run cypress cloud, run the following command
 npm run cy:run:cloud
 ```
 
-##Features:
+## Features:
 * **End-to-End Testing**: Automate your end-to-end testing scenarios to ensure the robustness of your web application.
 * **Comprehensive Test Coverage**: Cover various aspects of your application, including UI interactions, form submissions, API calls, and more.
 * **Easy Setup**: Get started quickly with simple setup instructions and an intuitive directory structure.
@@ -82,7 +82,7 @@ is [here](https://dashboard.cypress.io/projects/5r89t6/runs)
 3. [GitHub Repository](https://github.com/cypress-io): Fork and star the repository to stay updated with the latest developments.
 
 ## Apache License
-This project is licensed under the Apache License - see the [LICENSE](https://github.com/AbuBakkar32/cypress-fully-automation-site/blob/main/LICENSE)) file for details.
+This project is licensed under the Apache License - see the ([LICENSE](https://github.com/AbuBakkar32/cypress-fully-automation-site/blob/main/LICENSE)) file for details.
 2. Create a new job
 3. Add the following commands to the job:
 
