@@ -6,13 +6,13 @@ describe('Login User', () => {
         cy.contains('Login to your account')
 
         // Replace '#email' and '#password' with the actual selectors for each input field
-        cy.get('#email').type('testuser@example.com')
-        cy.get('#password').type('password')
-        cy.get('#login').click()
+        cy.get('[data-qa="login-email"]').type('abu@gmail.com')
+        cy.get('[data-qa="login-password"]').type('123456')
+        cy.get('[data-qa="login-button"]').click()
 
-        cy.contains('Logged in as Test User')
+        cy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(10) > a').contains('Logged in as Abu Bakkar')
 
-        cy.get('#deleteAccount').click()
+        cy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(5) > a').click()
         cy.contains('ACCOUNT DELETED!')
     })
 })
