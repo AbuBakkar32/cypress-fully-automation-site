@@ -6,7 +6,7 @@ module.exports = defineConfig({
     screenshots: true,
     videosFolder: 'cypress/videos',
     video: true,
-    screenshotOnRunFailure: true,
+    screenshotOnRunFailure: false,
     reporter: 'cypress-mochawesome-reporter', reporterOptions: {
         charts: true,
         reportPageTitle: 'custom-title',
