@@ -8,10 +8,8 @@
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "start": "my-server -p 3030 --https",
-    "cy:cloud": "cypress run --record --key af8ca1ca-a0be-4fbd-b377-fb03d094d8eb",
-    "cy:cloud_p": "cypress run --record --key af8ca1ca-a0be-4fbd-b377-fb03d094d8eb --parallel",
-    "cy:ci": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test start https-get://localhost:3030 cy:run"
+    "start": "npm server",
+    "cy:cloud": "cypress run --record --key af8ca1ca-a0be-4fbd-b377-fb03d094d8eb"
   },
   "dependencies": {
     "mochawesome": "^7.1.3"
