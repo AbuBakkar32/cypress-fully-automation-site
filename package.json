@@ -1,7 +1,8 @@
 {
   "devDependencies": {
     "@cypress/code-coverage": "^3.12.39",
-    "cypress": "^13.9.0"
+    "cypress": "^13.9.0",
+    "cypress-mochawesome-reporter": "^3.8.2"
   },
   "scripts": {
     "cy:open": "cypress open",
