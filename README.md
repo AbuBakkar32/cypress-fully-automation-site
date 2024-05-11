@@ -1,4 +1,4 @@
-# automation-exercise-site
+# cypress-fully-automation-site
 
 This is a automationexercise website that is used for the automation test for this site.
 
