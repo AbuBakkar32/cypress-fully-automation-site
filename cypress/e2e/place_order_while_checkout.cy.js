@@ -1,5 +1,5 @@
 describe('Test Case 14: Place Order: Register while Checkout', () => {
-    it('adds products, registers, places order, and deletes account', () => {
+    it('adds products into the cart', () => {
         cy.visit('http://automationexercise.com');
 
         // Verify home page is visible
@@ -32,7 +32,6 @@ describe('Test Case 14: Place Order: Register while Checkout', () => {
         // Click 'Register / Login' button
         cy.get('#checkoutModal > div > div > div.modal-body > p:nth-child(2) > a').click();
 
-
         // Fill all details in Signup and create account
         cy.contains('New User Signup!')
 
@@ -63,9 +62,7 @@ describe('Test Case 14: Place Order: Register while Checkout', () => {
         cy.get('[data-qa="mobile_number"]').type('1234567890')
 
         cy.get('[data-qa="create-account"]').click()
-        //
         cy.get('[data-qa="account-created"]').contains('Account Created!')
-
         cy.get('[data-qa="continue-button"]').click()
 
         // Verify ' Logged in as username' at top
