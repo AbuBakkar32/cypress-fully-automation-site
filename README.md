@@ -30,7 +30,11 @@ To run cypress cloud, run the following command
 npm run cy:run:cloud
 ```
 
+![demo3.png](reports%2Fdemo3.png)
+
 ![demo.png](reports%2Fdemo.png)
+
+![demo1.png](reports%2Fdemo1.png)
 
 ## Features:
 
