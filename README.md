@@ -3,6 +3,7 @@
 This is a automationexercise website that is used for the automation test for this site.
 
 ## Installation
+
 clone the repository and run the following command to install the dependencies
 
 ```bash
@@ -29,14 +30,20 @@ To run cypress cloud, run the following command
 npm run cy:run:cloud
 ```
 
+![demo.png](reports%2Fdemo.png)
+
 ## Features:
+
 * **End-to-End Testing**: Automate your end-to-end testing scenarios to ensure the robustness of your web application.
-* **Comprehensive Test Coverage**: Cover various aspects of your application, including UI interactions, form submissions, API calls, and more.
+* **Comprehensive Test Coverage**: Cover various aspects of your application, including UI interactions, form
+  submissions, API calls, and more.
 * **Easy Setup**: Get started quickly with simple setup instructions and an intuitive directory structure.
-* **Customizable Tests**: Tailor the tests according to your application's requirements using Cypress's flexible testing capabilities.
+* **Customizable Tests**: Tailor the tests according to your application's requirements using Cypress's flexible testing
+  capabilities.
 * **Continuous Integration**: Integrate seamlessly with popular **CI/CD** platforms to automate testing workflows.
 
 # Test Cases List
+
 1. Register User
 2. Login User with correct email and password
 3. Login User with incorrect email and password
@@ -65,6 +72,7 @@ npm run cy:run:cloud
 26. Verify Scroll Up without 'Arrow' button and Scroll Down functionality
 
 ## Folder Structure
+
 1. fixtures: Contains the test data
 2. e2e: Contains the test files
 3. support: Contains the custom commands and other support files
@@ -73,20 +81,29 @@ npm run cy:run:cloud
 6. reports: Contains the reports of the test cases
 
 ## Cypress Dashboard
+
 The test cases are also available in the cypress dashboard. The link
 is [here](https://dashboard.cypress.io/projects/5r89t6/runs)
 
 ## Resources:
-1. [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress): Explore Cypress's official documentation for in-depth guides and examples.
-2. [Cypress Best Practices](https://docs.cypress.io/guides/references/best-practices): Learn best practices for writing efficient and maintainable Cypress tests.
-3. [GitHub Repository](https://github.com/cypress-io): Fork and star the repository to stay updated with the latest developments.
+
+1. [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress): Explore Cypress's official
+   documentation for in-depth guides and examples.
+2. [Cypress Best Practices](https://docs.cypress.io/guides/references/best-practices): Learn best practices for writing
+   efficient and maintainable Cypress tests.
+3. [GitHub Repository](https://github.com/cypress-io): Fork and star the repository to stay updated with the latest
+   developments.
 
 ## Apache License
-This project is licensed under the Apache License - see the ([LICENSE](https://github.com/AbuBakkar32/cypress-fully-automation-site/blob/main/LICENSE)) file for details.
+
+This project is licensed under the Apache License - see
+the ([LICENSE](https://github.com/AbuBakkar32/cypress-fully-automation-site/blob/main/LICENSE)) file for details.
+
 2. Create a new job
 3. Add the following commands to the job:
 
 ## Run Project In Cypress Cloud
+
 ```bash
 npm install
 npm cypress run --record --key [Sceret Key]
