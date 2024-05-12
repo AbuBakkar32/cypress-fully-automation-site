@@ -36,10 +36,10 @@ describe('Test Case 12: Add Products in Cart', () => {
             const price = parseFloat($el.find('.cart_price').text().replace(/[^0-9.-]+/g, "")) * 1000;
             const quantity = parseInt($el.find('.cart_quantity').text());
             const totalPrice = price * quantity;
-            cy.get('.cart_total_price').invoke('text').then((totalPriceText) => {
-                const total = parseFloat(totalPriceText.replace(/[^0-9.-]+/g, "")) * 1000
-                expect(total).to.equal(totalPrice);
-            });
+
+            // Find total price of each product and match is equal to price * quantity
+            const total = parseFloat($el.find('.cart_total_price').text().replace(/[^0-9.-]+/g, "")) * 1000
+            expect(total).to.equal(totalPrice);
         });
     });
 });
