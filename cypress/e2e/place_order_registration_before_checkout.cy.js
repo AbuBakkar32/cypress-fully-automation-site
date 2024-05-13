@@ -1,39 +1,15 @@
-describe('Place Order: Register while Checkout', () => {
-    it('adds products into the cart, register, and shipping', () => {
+describe('Place Order: Register Before Checkout', () => {
+    it('Register before cart adds products into the cart, and process shippment', () => {
         cy.visit('http://automationexercise.com');
 
         // Verify home page is visible
         cy.get('.logo a>img').should('be.visible');
 
-        // add product
-        cy.get('.product-image-wrapper .choose > ul >li >a').first().click();
-
-        // Verify product detail is opened
-        cy.get('.product-information').should('be.visible');
-
-        // Increase quantity to 4
-        cy.get('#quantity').clear().type('4');
-
-        // Click 'Add to cart' button
-        cy.get('.cart').click();
-
-        // confirm the product
-        cy.get('#cartModal > div > div > div.modal-footer > button').click();
-
-        // Click 'View Cart' button
-        cy.get('li [href="/view_cart"]').click();
-
-        // Verify cart page is displayed
-        cy.get('.cart_info').should('be.visible');
-
-        // Click 'Proceed To Checkout' button
-        cy.contains('Proceed To Checkout').click();
-
-        // Click 'Register / Login' button
-        cy.get('#checkoutModal > div > div > div.modal-body > p:nth-child(2) > a').click();
+        //click signup/login button
+        cy.contains('Signup / Login').click();
 
         // Fill all details in Signup and create account
-        cy.contains('New User Signup!')
+        cy.contains('New User Signup!').should('be.visible');
 
         cy.get('[data-qa="signup-name"]').type('Amir Hossain')
         cy.get('[data-qa="signup-email"]').type('amir.swe@gmail.com')
@@ -66,10 +42,28 @@ describe('Place Order: Register while Checkout', () => {
         cy.get('[data-qa="continue-button"]').click()
 
         // Verify ' Logged in as username' at top
-        cy.contains('Logged in as Amir Hossain')
+        cy.contains('Logged in as Amir Hossain').should('be.visible');
 
-        // Click 'Cart' button again
+        // add product
+        cy.get('.product-image-wrapper .choose > ul >li >a').first().click();
+
+        // Verify product detail is opened
+        cy.get('.product-information').should('be.visible');
+
+        // Increase quantity to 4
+        cy.get('#quantity').clear().type('4');
+
+        // Click 'Add to cart' button
+        cy.get('.cart').click();
+
+        // confirm the product
+        cy.get('#cartModal > div > div > div.modal-footer > button').click();
+
+        // Click 'View Cart' button
         cy.get('li [href="/view_cart"]').click();
+
+        // Verify cart page is displayed
+        cy.get('.cart_info').should('be.visible');
 
         // Click 'Proceed To Checkout' button again
         cy.contains('Proceed To Checkout').click();
@@ -95,5 +89,7 @@ describe('Place Order: Register while Checkout', () => {
         // Verify 'ACCOUNT DELETED!' and click 'Continue' button
         cy.get('[data-qa="account-deleted"]').contains('Account Deleted!')
         cy.get('[data-qa="continue-button"]').click()
+
+
     });
 });
