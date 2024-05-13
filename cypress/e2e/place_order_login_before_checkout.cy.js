@@ -59,8 +59,8 @@ describe('Place Order: Register Before Checkout', () => {
         cy.contains('Login to your account').should('be.visible')
 
         // Replace '#email' and '#password' with the actual selectors for each input field
-        cy.get('[data-qa="login-email"]').type('preaus@gmail.com')
-        cy.get('[data-qa="login-password"]').type('123456')
+        cy.get('[data-qa="login-email"]').type('amir.swe@gmail.com')
+        cy.get('[data-qa="login-password"]').type('abubakkar90')
         cy.get('[data-qa="login-button"]').click()
 
         // Verify ' Logged in as username' at top
