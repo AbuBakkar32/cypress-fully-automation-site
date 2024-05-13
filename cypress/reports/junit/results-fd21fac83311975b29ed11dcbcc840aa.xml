@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="83.027" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-05-13T12:55:58" tests="0" file="cypress\e2e\download_Invoice_after_purchase_order.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Download Invoice after purchase order" timestamp="2024-05-13T12:55:58" tests="1" time="83.019" failures="0">
+    <testcase name="Download Invoice after purchase order should allow downloading invoice after successful purchase" time="77.781" classname="should allow downloading invoice after successful purchase">
+    </testcase>
+  </testsuite>
+</testsuites>

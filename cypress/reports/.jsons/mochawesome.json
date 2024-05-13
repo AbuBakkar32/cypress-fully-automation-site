@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-13T12:50:29.629Z",
+    "end": "2024-05-13T12:50:55.550Z",
+    "duration": 25921,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b5ff8901-1c4c-415e-ae74-f4fe87fac8f2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\add_product_cart.cy.js",
+      "file": "cypress\\e2e\\add_product_cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d6b95c77-cd37-4f55-b17b-73f319d9cbd1",
+          "title": "Test Case 12: Add Products in Cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add Products in Cart",
+              "fullTitle": "Test Case 12: Add Products in Cart Add Products in Cart",
+              "timedOut": null,
+              "duration": 20105,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Step 1: Launch browser\n// Cypress automatically launches the browser\n// Step 2: Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// Step 3: Verify that home page is visible successfully\ncy.url().should('include', 'automationexercise');\n// Step 4: Click 'Products' button\ncy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(2) > a').click();\n// Step 5: Hover over first product and click 'Add to cart'\ncy.xpath('/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[1]').trigger('mouseover').xpath('/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[1]/div[1]/a').click();\n// Step 6: Click 'Continue Shopping' button\ncy.get('#cartModal > div > div > div.modal-footer > button').click();\n// Step 7: Hover over second product and click 'Add to cart'\ncy.xpath('/html/body/section[2]/div/div/div[2]/div/div[3]/div/div[1]').trigger('mouseover').xpath('/html/body/section[2]/div/div/div[2]/div/div[3]/div/div[1]/div[1]/a').click();\ncy.get('#cartModal > div > div > div.modal-footer > button').click();\n// Step 8: Click 'View Cart' button\ncy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(3) > a').click();\n// Step 9: Verify both products are added to Cart\ncy.get('#cart_info_table > tbody').find('.cart_product').should('have.length', 2);\n// Step 10: Verify their prices, quantity and total price\n// Assuming each product has a 'price' class and the total price has a 'total-price' class\ncy.get('tbody > tr').each($el => {\n  const price = parseFloat($el.find('.cart_price').text().replace(/[^0-9.-]+/g, \"\")) * 1000;\n  const quantity = parseInt($el.find('.cart_quantity').text());\n  const totalPrice = price * quantity;\n  // Find total price of each product and match is equal to price * quantity\n  const total = parseFloat($el.find('.cart_total_price').text().replace(/[^0-9.-]+/g, \"\")) * 1000;\n  expect(total).to.equal(totalPrice);\n});",
+              "err": {},
+              "uuid": "dae3d860-307c-475d-8074-8ea98d0bbcbf",
+              "parentUUID": "d6b95c77-cd37-4f55-b17b-73f319d9cbd1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "dae3d860-307c-475d-8074-8ea98d0bbcbf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20105,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
