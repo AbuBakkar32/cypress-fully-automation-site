@@ -10,7 +10,7 @@ describe('Logout User', () => {
         cy.get('[data-qa="login-password"]').type('123456')
         cy.get('[data-qa="login-button"]').click()
 
-        cy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(10) > a').contains('Logged in as preaus').should('be.visible')
+        cy.contains('Logged in as Preaus Sarkar').should('be.visible')
 
         cy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(4)').click()
 
