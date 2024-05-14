@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "cypress-multi-reporters": "^1.6.4",
+    "cypress-plugin-api": "^2.11.1",
     "mocha-junit-reporter": "^2.2.1",
     "mochawesome": "^7.1.3"
   }
