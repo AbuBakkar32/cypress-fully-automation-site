@@ -19,7 +19,7 @@ describe('Test Case 8: Verify All Products and product detail page', () => {
         cy.contains('All Products').should('be.visible');
 
         // Step 7: Click on 'View Product' of first product
-        cy.get('body > section:nth-child(3) > div > div > div.col-sm-9.padding-right > div > div:nth-child(3) > div > div.choose > ul').click();
+        cy.get('.product-image-wrapper .choose > ul >li >a').first().click();
 
         // Step 8: User is landed to product detail page
         cy.url().should('include', 'product_details');

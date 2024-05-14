@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="48.727" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-05-14T06:55:21" tests="0" file="cypress\e2e\add_review_on_product.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Add review on product" timestamp="2024-05-14T06:55:21" tests="1" time="48.280" failures="0">
+    <testcase name="Add review on product adds a review and verifies success message" time="41.712" classname="adds a review and verifies success message">
+    </testcase>
+  </testsuite>
+</testsuites>
