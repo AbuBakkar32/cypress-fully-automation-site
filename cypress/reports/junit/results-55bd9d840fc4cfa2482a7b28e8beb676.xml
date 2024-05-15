@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="18.120" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-05-14T07:44:52" tests="0" file="cypress\e2e\verify_subscription_card_page.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="Verify Subscription in card page" timestamp="2024-05-14T07:44:53" tests="1" time="17.645" failures="0">
-    <testcase name="Verify Subscription in card page Verify Subscription in card page" time="10.261" classname="Verify Subscription in card page">
-    </testcase>
-  </testsuite>
-</testsuites>
