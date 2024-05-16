@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="69.893" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-05-16T03:39:09" tests="0" file="cypress\e2e\place_order_login_before_checkout.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Place Order: Register Before Checkout" timestamp="2024-05-16T03:39:10" tests="1" time="69.363" failures="0">
+    <testcase name="Place Order: Register Before Checkout Register before cart adds products into the cart, and process shippment" time="63.815" classname="Register before cart adds products into the cart, and process shippment">
+    </testcase>
+  </testsuite>
+</testsuites>
