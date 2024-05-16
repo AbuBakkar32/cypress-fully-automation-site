@@ -1,0 +1,187 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-16T03:30:42.599Z",
+    "end": "2024-05-16T03:30:46.776Z",
+    "duration": 4177,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ab018217-9750-421e-a143-61a6cf8bf7b7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\api\\placeholder_api_tesing.cy.js",
+      "file": "cypress\\e2e\\api\\placeholder_api_tesing.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "08a2372c-75be-4f8c-b247-37461e837531",
+          "title": "JSONPlaceholder User Management API Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should create a new user (Mocked Response)",
+              "fullTitle": "JSONPlaceholder User Management API Tests should create a new user (Mocked Response)",
+              "timedOut": null,
+              "duration": 1167,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: `${baseUrl}/users`,\n  body: {\n    name: 'Test User',\n    username: 'testuser',\n    email: 'testuser@example.com',\n    address: {\n      street: 'Test St',\n      suite: 'Apt. 123',\n      city: 'Test City',\n      zipcode: '12345',\n      geo: {\n        lat: '0.0',\n        lng: '0.0'\n      }\n    },\n    phone: '1-555-555-5555',\n    website: 'testuser.com',\n    company: {\n      name: 'Test Company',\n      catchPhrase: 'Testing is fun',\n      bs: 'test everything'\n    }\n  }\n}).then(response => {\n  expect(response.status).to.eq(201);\n  expect(response.body).to.have.property('id');\n  userId = response.body.id;\n});",
+              "err": {},
+              "uuid": "56bf1762-e139-4326-9c48-6b91197f026f",
+              "parentUUID": "08a2372c-75be-4f8c-b247-37461e837531",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should get the created user by ID",
+              "fullTitle": "JSONPlaceholder User Management API Tests should get the created user by ID",
+              "timedOut": null,
+              "duration": 493,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'GET',\n  url: `${baseUrl}/users/${10}`\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.have.property('username', 'Moriah.Stanton');\n  expect(response.body).to.have.property('email', 'Rey.Padberg@karina.biz');\n});",
+              "err": {},
+              "uuid": "1a6cba9e-ad0c-4905-86a9-cbf74d8c6ce8",
+              "parentUUID": "08a2372c-75be-4f8c-b247-37461e837531",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should update the user by ID",
+              "fullTitle": "JSONPlaceholder User Management API Tests should update the user by ID",
+              "timedOut": null,
+              "duration": 444,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'PUT',\n  url: `${baseUrl}/users/10`,\n  body: {\n    \"name\": \"Clementina DuBuque\",\n    \"username\": \"Moriah.Stanton\",\n    \"email\": \"Rey.Padberg@karina.biz\",\n    \"address\": {\n      \"street\": \"Kattie Turnpike\",\n      \"suite\": \"Suite 198\",\n      \"city\": \"Lebsackbury\",\n      \"zipcode\": \"31428-2261\",\n      \"geo\": {\n        \"lat\": \"-38.2386\",\n        \"lng\": \"57.2232\"\n      }\n    },\n    \"phone\": \"024-648-3804\",\n    \"website\": \"ambrose.net\",\n    \"company\": {\n      \"name\": \"Hoeger LLC\",\n      \"catchPhrase\": \"Centralized empowering task-force\",\n      \"bs\": \"target end-to-end models\"\n    }\n  }\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.have.property('username', 'Moriah.Stanton');\n  expect(response.body).to.have.property('email', 'Rey.Padberg@karina.biz');\n});",
+              "err": {},
+              "uuid": "7bef1dd8-fc0d-4c55-bfd2-e1db1b17c8b5",
+              "parentUUID": "08a2372c-75be-4f8c-b247-37461e837531",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should list all users and contain the updated user",
+              "fullTitle": "JSONPlaceholder User Management API Tests should list all users and contain the updated user",
+              "timedOut": null,
+              "duration": 216,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'GET',\n  url: `${baseUrl}/users`\n}).then(response => {\n  expect(response.status).to.eq(200);\n  expect(response.body).to.be.an('array');\n  const user = response.body.find(user => user.id === 10);\n  expect(user).to.exist;\n  expect(user).to.have.property('username', 'Moriah.Stanton');\n  expect(user).to.have.property('email', 'Rey.Padberg@karina.biz');\n});",
+              "err": {},
+              "uuid": "f5634efd-9458-4d42-b621-05b4d59b405c",
+              "parentUUID": "08a2372c-75be-4f8c-b247-37461e837531",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should delete the user by ID",
+              "fullTitle": "JSONPlaceholder User Management API Tests should delete the user by ID",
+              "timedOut": null,
+              "duration": 1419,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'DELETE',\n  url: `${baseUrl}/users/${userId}`\n}).then(response => {\n  expect(response.status).to.eq(200);\n});\n// Verify the user is deleted\ncy.request({\n  method: 'GET',\n  url: `${baseUrl}/users/${userId}`,\n  failOnStatusCode: false\n}).then(response => {\n  expect(response.status).to.eq(404);\n});",
+              "err": {},
+              "uuid": "839793c6-7524-43c9-950e-4c4bc887a772",
+              "parentUUID": "08a2372c-75be-4f8c-b247-37461e837531",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "56bf1762-e139-4326-9c48-6b91197f026f",
+            "1a6cba9e-ad0c-4905-86a9-cbf74d8c6ce8",
+            "7bef1dd8-fc0d-4c55-bfd2-e1db1b17c8b5",
+            "f5634efd-9458-4d42-b621-05b4d59b405c",
+            "839793c6-7524-43c9-950e-4c4bc887a772"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3739,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

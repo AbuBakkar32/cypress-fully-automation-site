@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-16T03:31:43.725Z",
+    "end": "2024-05-16T03:31:45.412Z",
+    "duration": 1687,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "56c95ff6-d628-4ac4-a41b-13e7effb5076",
+      "title": "",
+      "fullFile": "cypress\\e2e\\api\\verify_login_with_valid_info.cy.js",
+      "file": "cypress\\e2e\\api\\verify_login_with_valid_info.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "758eb950-2894-41cd-b4ff-42f2366b6e9e",
+          "title": "API Test: POST To Verify Login with valid details",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return user exists message",
+              "fullTitle": "API Test: POST To Verify Login with valid details should return user exists message",
+              "timedOut": null,
+              "duration": 1569,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Define valid login credentials\nconst email = \"preaus@gmail.com\";\nconst password = \"123456\";\n// Send a POST request with valid credentials\ncy.request({\n  method: \"POST\",\n  url: \"https://automationexercise.com/api/verifyLogin\",\n  body: {\n    email: email,\n    password: password\n  }\n}).then(response => {\n  // Assert the response status code\n  expect(response.status).to.eq(200);\n  // Assert the response body message\n  expect(response.body).to.have.property('message', 'Bad request, email or password parameter is missing in POST request.');\n});",
+              "err": {},
+              "uuid": "0b70e979-e780-4002-b22b-fcfd7dc4a836",
+              "parentUUID": "758eb950-2894-41cd-b4ff-42f2366b6e9e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0b70e979-e780-4002-b22b-fcfd7dc4a836"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1569,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

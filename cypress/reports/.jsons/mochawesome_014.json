@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-16T03:31:19.831Z",
+    "end": "2024-05-16T03:31:21.370Z",
+    "duration": 1539,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "811c72d7-098b-4050-8d4d-cb6cda09c8a5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\api\\put_to_search_product.cy.js",
+      "file": "cypress\\e2e\\api\\put_to_search_product.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c699d3a9-f30d-4f94-916b-c17a08b985a4",
+          "title": "API Test: POST To Search Product",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return a list of searched products",
+              "fullTitle": "API Test: POST To Search Product should return a list of searched products",
+              "timedOut": null,
+              "duration": 1460,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Send a POST request with the search parameter\ncy.request({\n  method: \"POST\",\n  url: \"https://automationexercise.com/api/searchProduct\",\n  body: {\n    search_product: \"dress\"\n  }\n}).then(response => {\n  //const data = JSON.parse(response.body);\n  console.log(response.body);\n  // Assert the response status code\n  expect(response.status).to.eq(200);\n  // Assert the structure of the response JSON\n  expect(response.body).to.have.property('message', 'Bad request, search_product parameter is missing in POST request.');\n});",
+              "err": {},
+              "uuid": "015b9b01-7fdd-46e6-aef0-7c7465da38ec",
+              "parentUUID": "c699d3a9-f30d-4f94-916b-c17a08b985a4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "015b9b01-7fdd-46e6-aef0-7c7465da38ec"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1460,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
