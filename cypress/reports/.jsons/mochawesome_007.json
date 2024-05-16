@@ -1,0 +1,150 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 2,
+    "failures": -1,
+    "start": "2024-05-16T03:29:22.820Z",
+    "end": "2024-05-16T03:29:40.303Z",
+    "duration": 17483,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 66.66666666666666,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "744fe340-b1af-4535-b91a-b02e1bad0c7a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\api\\fileUpload.cy.js",
+      "file": "cypress\\e2e\\api\\fileUpload.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6c10ab50-20fb-4362-ad1f-c5695b333375",
+          "title": "Upload File Request",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC1 - No Input Field || upload File by changing action",
+              "fullTitle": "Upload File Request TC1 - No Input Field || upload File by changing action",
+              "timedOut": null,
+              "duration": 12134,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.ilovepdf.com/pdf_to_word\");\ncy.get(\"a#pickfiles\").selectFile(\"reports/unittest.pdf\", {\n  action: \"drag-drop\"\n});",
+              "err": {},
+              "uuid": "c89ce98e-1765-4c82-ac1b-68bba398b137",
+              "parentUUID": "6c10ab50-20fb-4362-ad1f-c5695b333375",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC2- Error Case- No Input Field|| upload File without changing action",
+              "fullTitle": "Upload File Request TC2- Error Case- No Input Field|| upload File without changing action",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.visit(\"https://www.ilovepdf.com/pdf_to_word\");\ncy.contains(\"Select PDF file\").selectFile(\"reports/unittest.pdf\");",
+              "err": {},
+              "uuid": "7b99d12b-fd0b-4e58-b948-6387a085b742",
+              "parentUUID": "6c10ab50-20fb-4362-ad1f-c5695b333375",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC3- Upload File with input field",
+              "fullTitle": "Upload File Request TC3- Upload File with input field",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.visit(\"https://demoqa.com/upload-download\");\ncy.get(\"input#uploadFile\").selectFile(\"reports/unittest.pdf\");",
+              "err": {},
+              "uuid": "efbac4c3-f536-413f-9bae-ade1688199cd",
+              "parentUUID": "6c10ab50-20fb-4362-ad1f-c5695b333375",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c89ce98e-1765-4c82-ac1b-68bba398b137"
+          ],
+          "failures": [],
+          "pending": [
+            "7b99d12b-fd0b-4e58-b948-6387a085b742",
+            "efbac4c3-f536-413f-9bae-ade1688199cd"
+          ],
+          "skipped": [],
+          "duration": 12134,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
