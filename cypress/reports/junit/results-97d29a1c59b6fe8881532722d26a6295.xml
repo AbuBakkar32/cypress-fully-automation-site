@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.592" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-05-18T07:33:11" tests="0" file="cypress\e2e\api\search_without_parameter.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API Test: POST To Search Product without search_product parameter" timestamp="2024-05-18T07:33:11" tests="1" time="0.559" failures="0">
+    <testcase name="API Test: POST To Search Product without search_product parameter should return a 400 Bad Request error with appropriate message" time="0.480" classname="should return a 400 Bad Request error with appropriate message">
+    </testcase>
+  </testsuite>
+</testsuites>
