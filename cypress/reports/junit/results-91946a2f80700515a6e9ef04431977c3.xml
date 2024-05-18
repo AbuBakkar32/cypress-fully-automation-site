@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.418" tests="5" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-05-18T07:32:49" tests="0" file="cypress\e2e\api\placeholder_api_tesing.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="JSONPlaceholder User Management API Tests" timestamp="2024-05-18T07:32:49" tests="5" time="3.361" failures="0">
+    <testcase name="JSONPlaceholder User Management API Tests should create a new user (Mocked Response)" time="0.443" classname="should create a new user (Mocked Response)">
+    </testcase>
+    <testcase name="JSONPlaceholder User Management API Tests should get the created user by ID" time="0.969" classname="should get the created user by ID">
+    </testcase>
+    <testcase name="JSONPlaceholder User Management API Tests should update the user by ID" time="0.390" classname="should update the user by ID">
+    </testcase>
+    <testcase name="JSONPlaceholder User Management API Tests should list all users and contain the updated user" time="0.157" classname="should list all users and contain the updated user">
+    </testcase>
+    <testcase name="JSONPlaceholder User Management API Tests should delete the user by ID" time="1.313" classname="should delete the user by ID">
+    </testcase>
+  </testsuite>
+</testsuites>

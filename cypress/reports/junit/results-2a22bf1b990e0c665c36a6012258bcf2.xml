@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="1.629" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-05-16T03:31:08" tests="0" file="cypress\e2e\api\put_to_all_brand_list.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="API Test: PUT To All Brands List" timestamp="2024-05-16T03:31:08" tests="1" time="1.578" failures="0">
-    <testcase name="API Test: PUT To All Brands List should return method not supported message" time="1.556" classname="should return method not supported message">
-    </testcase>
-  </testsuite>
-</testsuites>

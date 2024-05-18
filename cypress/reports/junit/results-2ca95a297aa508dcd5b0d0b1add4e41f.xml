@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="1.979" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-05-16T03:30:27" tests="0" file="cypress\e2e\api\get_user_account_detail_by_mail.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="API Test: GET User Account Detail by Email" timestamp="2024-05-16T03:30:27" tests="1" time="1.886" failures="0">
-    <testcase name="API Test: GET User Account Detail by Email should return user account details" time="1.786" classname="should return user account details">
-    </testcase>
-  </testsuite>
-</testsuites>
