@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="67.447" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2024-05-25T06:27:58" tests="0" file="cypress\e2e\download_Invoice_after_purchase_order.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Download Invoice after purchase order" timestamp="2024-05-25T06:27:58" tests="1" time="67.009" failures="1">
+    <testcase name="Download Invoice after purchase order should allow downloading invoice after successful purchase" time="0.000" classname="should allow downloading invoice after successful purchase">
+      <failure message="Timed out after waiting `60000ms` for your remote page to load.
+
+Your page did not fire its `load` event within `60000ms`.
+
+You can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.
+
+Browsers will not fire the `load` event until all stylesheets and scripts are done downloading.
+
+When this `load` event occurs, Cypress will continue running commands." type="CypressError"><![CDATA[CypressError: Timed out after waiting `60000ms` for your remote page to load.
+
+Your page did not fire its `load` event within `60000ms`.
+
+You can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.
+
+Browsers will not fire the `load` event until all stylesheets and scripts are done downloading.
+
+When this `load` event occurs, Cypress will continue running commands.
+    at timedOutWaitingForPageLoad (https://automationexercise.com/__cypress/runner/cypress_runner.js:130511:64)
+    at <unknown> (https://automationexercise.com/__cypress/runner/cypress_runner.js:131497:16)
+    at tryCatcher (https://automationexercise.com/__cypress/runner/cypress_runner.js:1807:23)
+    at <unknown> (https://automationexercise.com/__cypress/runner/cypress_runner.js:4186:41)
+    at tryCatcher (https://automationexercise.com/__cypress/runner/cypress_runner.js:1807:23)
+    at Promise._settlePromiseFromHandler (https://automationexercise.com/__cypress/runner/cypress_runner.js:1519:31)
+    at Promise._settlePromise (https://automationexercise.com/__cypress/runner/cypress_runner.js:1576:18)
+    at Promise._settlePromise0 (https://automationexercise.com/__cypress/runner/cypress_runner.js:1621:10)
+    at Promise._settlePromises (https://automationexercise.com/__cypress/runner/cypress_runner.js:1697:18)
+    at _drainQueueStep (https://automationexercise.com/__cypress/runner/cypress_runner.js:2407:12)
+    at _drainQueue (https://automationexercise.com/__cypress/runner/cypress_runner.js:2400:9)
+    at Async._drainQueues (https://automationexercise.com/__cypress/runner/cypress_runner.js:2416:5)
+    at Async.drainQueues (https://automationexercise.com/__cypress/runner/cypress_runner.js:2286:14)
+From Your Spec Code:
+    at Context.eval (webpack:///./cypress/e2e/download_Invoice_after_purchase_order.cy.js:3:11)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
