@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-25T06:24:28.771Z",
+    "end": "2024-05-25T06:25:52.261Z",
+    "duration": 83490,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "55f950e9-a773-4a0b-8cdd-9d6fdbedb00d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\add_review_on_product.cy.js",
+      "file": "cypress\\e2e\\add_review_on_product.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c180c693-f046-4740-8342-674da4699307",
+          "title": "Add review on product",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "adds a review and verifies success message",
+              "fullTitle": "Add review on product adds a review and verifies success message",
+              "timedOut": null,
+              "duration": 77899,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationexercise.com');\n// Click on 'Products' button\ncy.get('a[href=\"/products\"]').click();\n// Verify user is navigated to ALL PRODUCTS page\ncy.contains('All Products').should('be.visible');\n// Select a product (replace with logic to choose a product)\n// ... your logic to select a product ...\n// Click on 'View Product' button\ncy.get('a[href=\"/product_details/1\"]').click(); // Assuming the first product\n// Verify 'Write Your Review' is visible\ncy.contains('Write Your Review').should('be.visible');\n// Enter name, email and review\nconst reviewerName = 'Test User';\nconst reviewerEmail = 'test.user@example.com';\nconst reviewText = 'This is a great product!';\ncy.get('#name').type(reviewerName);\ncy.get('#email').type(reviewerEmail);\ncy.get('#button-review').type(reviewText);\n// Verify success message 'Thank you for your review.'\ncy.get('#review-section div > span').should('contain', 'Thank you for your review.');",
+              "err": {},
+              "uuid": "cdc0f82b-7d80-47e5-a192-8dae053a8c29",
+              "parentUUID": "c180c693-f046-4740-8342-674da4699307",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cdc0f82b-7d80-47e5-a192-8dae053a8c29"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 77899,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
