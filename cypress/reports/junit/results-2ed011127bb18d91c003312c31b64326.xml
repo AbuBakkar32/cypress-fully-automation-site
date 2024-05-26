@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="12.530" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-05-26T02:30:10" tests="0" file="cypress\e2e\verify_subscription.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Verify Subscription in home page" timestamp="2024-05-26T02:30:10" tests="1" time="12.078" failures="0">
+    <testcase name="Verify Subscription in home page Verify Subscription in home page" time="6.341" classname="Verify Subscription in home page">
+    </testcase>
+  </testsuite>
+</testsuites>
