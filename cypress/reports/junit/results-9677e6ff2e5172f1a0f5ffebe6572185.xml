@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="1.404" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-05-26T02:34:37" tests="0" file="cypress\e2e\api\post_to_all_products_list.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API Test: POST To All Products List" timestamp="2024-05-26T02:34:37" tests="1" time="1.350" failures="0">
+    <testcase name="API Test: POST To All Products List should return method not supported message" time="1.304" classname="should return method not supported message">
+    </testcase>
+  </testsuite>
+</testsuites>

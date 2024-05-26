@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="0.778" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-05-25T06:53:28" tests="0" file="cypress\e2e\api\api.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="API Test using plugin cypress-plugin-api" timestamp="2024-05-25T06:53:28" tests="1" time="0.730" failures="0">
-    <testcase name="API Test using plugin cypress-plugin-api test api - GET " time="0.588" classname="test api - GET ">
-    </testcase>
-  </testsuite>
-</testsuites>
