@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="30.415" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-05-25T06:39:30" tests="0" file="cypress\e2e\remove_poducts_from_cart.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="Remove Products From Cart" timestamp="2024-05-25T06:39:31" tests="1" time="29.791" failures="0">
-    <testcase name="Remove Products From Cart Check cart product successfully delete or not" time="23.232" classname="Check cart product successfully delete or not">
-    </testcase>
-  </testsuite>
-</testsuites>
