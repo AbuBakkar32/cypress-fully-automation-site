@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="2.850" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-05-26T02:35:03" tests="0" file="cypress\e2e\api\verify_login_with_valid_info.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="API Test: POST To Verify Login with valid details" timestamp="2024-05-26T02:35:03" tests="1" time="2.796" failures="0">
-    <testcase name="API Test: POST To Verify Login with valid details should return user exists message" time="2.744" classname="should return user exists message">
-    </testcase>
-  </testsuite>
-</testsuites>
