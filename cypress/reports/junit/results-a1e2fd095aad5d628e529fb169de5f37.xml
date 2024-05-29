@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="1.939" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-05-26T02:34:00" tests="0" file="cypress\e2e\api\get_all_brand_list.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="API Test: Get All Brands List" timestamp="2024-05-26T02:34:00" tests="1" time="1.493" failures="0">
-    <testcase name="API Test: Get All Brands List should return a list of brands" time="1.846" classname="should return a list of brands">
-    </testcase>
-  </testsuite>
-</testsuites>

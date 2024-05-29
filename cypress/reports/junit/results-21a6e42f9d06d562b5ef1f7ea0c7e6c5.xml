@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="97.462" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-05-26T02:24:06" tests="0" file="cypress\e2e\search_products_and_verify_cart_after_login.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="Search Products and Verify Cart After Login" timestamp="2024-05-26T02:24:06" tests="1" time="96.822" failures="0">
-    <testcase name="Search Products and Verify Cart After Login searches products, adds to cart, verifies after login" time="88.180" classname="searches products, adds to cart, verifies after login">
-    </testcase>
-  </testsuite>
-</testsuites>
