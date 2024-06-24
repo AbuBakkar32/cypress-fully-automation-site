@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="19.413" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-06-24T10:35:05" tests="0" file="cypress\e2e\verify_scroll_up_and_down_functionality.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Verify Scroll Up and Down Functionality" timestamp="2024-06-24T10:35:06" tests="1" time="18.848" failures="0">
+    <testcase name="Verify Scroll Up and Down Functionality should scroll down, verify &quot;SUBSCRIPTION&quot;, scroll up, and verify homepage text" time="10.587" classname="should scroll down, verify &quot;SUBSCRIPTION&quot;, scroll up, and verify homepage text">
+    </testcase>
+  </testsuite>
+</testsuites>
