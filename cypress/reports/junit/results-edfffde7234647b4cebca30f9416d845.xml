@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="1.509" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-06-24T10:39:36" tests="0" file="cypress\e2e\api\put_to_search_product.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="API Test: POST To Search Product" timestamp="2024-06-24T10:39:36" tests="1" time="1.475" failures="0">
-    <testcase name="API Test: POST To Search Product should return a list of searched products" time="1.468" classname="should return a list of searched products">
-    </testcase>
-  </testsuite>
-</testsuites>
