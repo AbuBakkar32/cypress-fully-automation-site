@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-06-28T12:34:34.068Z",
+    "end": "2024-06-28T12:35:08.707Z",
+    "duration": 34639,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "66c3deac-a379-4c60-948e-7575221e856b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\remove_poducts_from_cart.cy.js",
+      "file": "cypress\\e2e\\remove_poducts_from_cart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cecad7d0-913c-4bc1-84f6-3fd301e5929c",
+          "title": "Remove Products From Cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check cart product successfully delete or not",
+              "fullTitle": "Remove Products From Cart Check cart product successfully delete or not",
+              "timedOut": null,
+              "duration": 28955,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationexercise.com');\n// Verify home page is visible\ncy.get('.logo a>img').should('be.visible');\n// add product\ncy.get('.product-image-wrapper .choose > ul >li >a').first().click();\n// Verify product detail is opened\ncy.get('.product-information').should('be.visible');\n// Increase quantity to 4\ncy.get('#quantity').clear().type('4');\n// Click 'Add to cart' button\ncy.get('.cart').click();\n// confirm the product\ncy.get('#cartModal > div > div > div.modal-footer > button').click();\n// Click 'View Cart' button\ncy.get('li [href=\"/view_cart\"]').click();\n// Verify cart page is displayed\ncy.get('.cart_info').should('be.visible');\n// Click 'Remove' button for remove product\ncy.get('.cart_quantity_delete').click();\n// Verify product is removed from cart\ncy.contains('Cart is empty!').should('be.visible');",
+              "err": {},
+              "uuid": "2df8ed12-ed72-4703-a803-12351b7a83e1",
+              "parentUUID": "cecad7d0-913c-4bc1-84f6-3fd301e5929c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2df8ed12-ed72-4703-a803-12351b7a83e1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28955,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

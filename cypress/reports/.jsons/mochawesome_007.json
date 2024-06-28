@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-06-28T12:29:00.078Z",
+    "end": "2024-06-28T12:29:22.706Z",
+    "duration": 22628,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c91d6eb3-6349-45ce-b1c3-4f6d862311bc",
+      "title": "",
+      "fullFile": "cypress\\e2e\\logout_user.cy.js",
+      "file": "cypress\\e2e\\logout_user.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "17ef42db-5723-432a-9a9e-b2722d035b6d",
+          "title": "Logout User",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login and logout a user",
+              "fullTitle": "Logout User should login and logout a user",
+              "timedOut": null,
+              "duration": 15360,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationexercise.com');\ncy.contains('Signup / Login').click();\ncy.contains('Login to your account');\n// Replace '#email' and '#password' with the actual selectors for each input field\ncy.get('[data-qa=\"login-email\"]').type('preaus@gmail.com');\ncy.get('[data-qa=\"login-password\"]').type('123456');\ncy.get('[data-qa=\"login-button\"]').click();\ncy.contains('Logged in as Preaus Sarkar').should('be.visible');\ncy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(4)').click();\n// Replace '#loginPage' with the actual selector or condition that verifies the user is on the login page\ncy.get('#form > div > div > div.col-sm-4.col-sm-offset-1 > div > h2').should('be.visible');",
+              "err": {},
+              "uuid": "819e2c04-2ee9-4a98-a115-68c072b26d4f",
+              "parentUUID": "17ef42db-5723-432a-9a9e-b2722d035b6d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "819e2c04-2ee9-4a98-a115-68c072b26d4f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15360,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
