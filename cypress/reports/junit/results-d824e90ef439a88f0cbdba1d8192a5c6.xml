@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="1.593" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-06-24T10:38:16" tests="0" file="cypress\e2e\api\ApiChaining.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="API Chaining" timestamp="2024-06-24T10:38:16" tests="1" time="1.547" failures="0">
-    <testcase name="API Chaining Should make API requests and chain them together" time="1.534" classname="Should make API requests and chain them together">
-    </testcase>
-  </testsuite>
-</testsuites>
