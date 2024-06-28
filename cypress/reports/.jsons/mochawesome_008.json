@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-06-28T12:29:28.367Z",
+    "end": "2024-06-28T12:30:48.640Z",
+    "duration": 80273,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "44b2ede2-4569-47ee-8791-6100a4d0b4b2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\place_order_login_before_checkout.cy.js",
+      "file": "cypress\\e2e\\place_order_login_before_checkout.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0c57cd59-bc54-4b89-9dac-57202b756eb8",
+          "title": "Place Order: Register Before Checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Register before cart adds products into the cart, and process shippment",
+              "fullTitle": "Place Order: Register Before Checkout Register before cart adds products into the cart, and process shippment",
+              "timedOut": null,
+              "duration": 73339,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationexercise.com');\n// Verify home page is visible\ncy.get('.logo a>img').should('be.visible');\n//click signup/login button\ncy.contains('Logout').click();\n// Fill up Login to your account\ncy.contains('Login to your account').should('be.visible');\n// Replace '#email' and '#password' with the actual selectors for each input field\ncy.get('[data-qa=\"login-email\"]').type('amir.swe@gmail.com');\ncy.get('[data-qa=\"login-password\"]').type('abubakkar90');\ncy.get('[data-qa=\"login-button\"]').click();\n// Verify ' Logged in as username' at top\ncy.contains('Logged in as').should('be.visible');\n// add product\ncy.get('.product-image-wrapper .choose > ul >li >a').first().click();\n// Verify product detail is opened\ncy.get('.product-information').should('be.visible');\n// Increase quantity to 4\ncy.get('#quantity').clear().type('4');\n// Click 'Add to cart' button\ncy.get('.cart').click();\n// confirm the product\ncy.get('#cartModal > div > div > div.modal-footer > button').click();\n// Click 'View Cart' button\ncy.get('li [href=\"/view_cart\"]').click();\n// Verify cart page is displayed\ncy.get('.cart_info').should('be.visible');\n// Click 'Proceed To Checkout' button again\ncy.contains('Proceed To Checkout').click();\n// Enter description in comment text area and click 'Place Order'\ncy.get('#ordermsg').type('Test order with registration');\ncy.contains('Place Order').click();\n// Click 'Pay and Confirm Order' button\ncy.get('[data-qa=\"name-on-card\"]').type('Amir Hossain');\ncy.get('[data-qa=\"card-number\"]').type('5655-1814-0058-1255');\ncy.get('[data-qa=\"cvc\"]').type('588');\ncy.get('[data-qa=\"expiry-month\"]').type('08/33');\ncy.get('[data-qa=\"expiry-year\"]').type('2033');\ncy.get('[data-qa = \"pay-button\"]').click();\n// Verify success message 'Your order has been placed successfully!'\ncy.contains('Congratulations! Your order has been confirmed!').should('be.visible');\n// Click 'Delete Account' button\ncy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(5) > a').click();\n// Verify 'ACCOUNT DELETED!' and click 'Continue' button\ncy.get('[data-qa=\"account-deleted\"]').contains('Account Deleted!');\ncy.get('[data-qa=\"continue-button\"]').click();",
+              "err": {},
+              "uuid": "25859f4c-055c-4664-b495-060fb01b0b01",
+              "parentUUID": "0c57cd59-bc54-4b89-9dac-57202b756eb8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "25859f4c-055c-4664-b495-060fb01b0b01"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 73339,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

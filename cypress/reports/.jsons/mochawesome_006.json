@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-06-28T12:28:08.241Z",
+    "end": "2024-06-28T12:28:53.113Z",
+    "duration": 44872,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "02766bc0-888a-4e80-907d-798b3f8b3588",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login_user.cy.js",
+      "file": "cypress\\e2e\\login_user.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "efa254fa-4e70-40d5-a7d4-f45bb5619991",
+          "title": "Login User",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login and delete a user",
+              "fullTitle": "Login User should login and delete a user",
+              "timedOut": null,
+              "duration": 37675,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationexercise.com');\ncy.contains('Logout').click();\ncy.contains('Login to your account').should('be.visible');\n// Replace '#email' and '#password' with the actual selectors for each input field\ncy.get('[data-qa=\"login-email\"]').type('amir.swe@gmail.com');\ncy.get('[data-qa=\"login-password\"]').type('abubakkar90');\ncy.get('[data-qa=\"login-button\"]').click();\ncy.contains('Logged in as Amir Hossain').should('be.visible');\ncy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(5) > a').click();\ncy.get('[data-qa=\"account-deleted\"]').contains('Account Deleted!');",
+              "err": {},
+              "uuid": "3a59ca01-eff5-45d5-8a95-5e3008ac11bb",
+              "parentUUID": "efa254fa-4e70-40d5-a7d4-f45bb5619991",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3a59ca01-eff5-45d5-8a95-5e3008ac11bb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 37675,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
