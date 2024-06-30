@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="14.818" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-06-28T12:33:19" tests="0" file="cypress\e2e\register_existing_email.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="Register User with existing email" timestamp="2024-06-28T12:33:20" tests="1" time="14.401" failures="0">
-    <testcase name="Register User with existing email Register User with existing email" time="9.276" classname="Register User with existing email">
-    </testcase>
-  </testsuite>
-</testsuites>
