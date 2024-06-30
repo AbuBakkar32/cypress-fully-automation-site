@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="44.872" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-06-28T12:28:08" tests="0" file="cypress\e2e\login_user.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="Login User" timestamp="2024-06-28T12:28:08" tests="1" time="44.396" failures="0">
-    <testcase name="Login User should login and delete a user" time="37.675" classname="should login and delete a user">
-    </testcase>
-  </testsuite>
-</testsuites>
