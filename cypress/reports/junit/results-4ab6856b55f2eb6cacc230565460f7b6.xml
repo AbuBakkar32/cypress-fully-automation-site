@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="37.326" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-07-05T06:42:46" tests="0" file="cypress\e2e\register_user.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Register User" timestamp="2024-07-05T06:42:47" tests="1" time="36.857" failures="0">
+    <testcase name="Register User should register and delete a new user" time="30.233" classname="should register and delete a new user">
+    </testcase>
+  </testsuite>
+</testsuites>
