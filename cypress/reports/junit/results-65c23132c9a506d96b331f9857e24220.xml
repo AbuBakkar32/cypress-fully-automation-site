@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="1.966" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-07-05T06:49:14" tests="0" file="cypress\e2e\api\ApiCallUsingFixture.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API Call UsingFixture" timestamp="2024-07-05T06:49:14" tests="1" time="1.543" failures="0">
+    <testcase name="API Call UsingFixture POST request using Fixture" time="1.876" classname="POST request using Fixture">
+    </testcase>
+  </testsuite>
+</testsuites>

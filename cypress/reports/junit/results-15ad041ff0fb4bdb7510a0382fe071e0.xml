@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="12.583" tests="3" failures="-1" skipped="2">
+  <testsuite name="Root Suite" timestamp="2024-07-05T06:49:41" tests="0" file="cypress\e2e\api\fileUpload.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Upload File Request" timestamp="2024-07-05T06:49:41" tests="3" time="12.536" failures="0">
+    <testcase name="Upload File Request TC1 - No Input Field || upload File by changing action" time="6.923" classname="TC1 - No Input Field || upload File by changing action">
+    </testcase>
+  </testsuite>
+</testsuites>
