@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="15.158" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-06-30T13:27:50" tests="0" file="cypress\e2e\invalid_login.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="Login User" timestamp="2024-06-30T13:27:51" tests="1" time="14.686" failures="0">
-    <testcase name="Login User should fail to login with incorrect email and password" time="9.013" classname="should fail to login with incorrect email and password">
-    </testcase>
-  </testsuite>
-</testsuites>
