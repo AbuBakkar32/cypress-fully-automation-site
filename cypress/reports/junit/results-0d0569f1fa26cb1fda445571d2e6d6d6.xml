@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="15.680" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-07-05T06:35:47" tests="0" file="cypress\e2e\add_to_cart_from_recommended_items.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="Add to cart from Recommended items" timestamp="2024-07-05T06:35:47" tests="1" time="15.276" failures="0">
-    <testcase name="Add to cart from Recommended items adds a recommended product to cart and verifies" time="10.030" classname="adds a recommended product to cart and verifies">
-    </testcase>
-  </testsuite>
-</testsuites>

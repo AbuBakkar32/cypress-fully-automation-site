@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-09T12:53:11.769Z",
+    "end": "2024-07-09T12:54:25.083Z",
+    "duration": 73314,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "def8a987-2176-430e-a3d0-58d15d50b5b2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\download_Invoice_after_purchase_order.cy.js",
+      "file": "cypress\\e2e\\download_Invoice_after_purchase_order.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d28f9ccb-fe05-4264-8f51-0e5ce9fa551a",
+          "title": "Download Invoice after purchase order",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should allow downloading invoice after successful purchase",
+              "fullTitle": "Download Invoice after purchase order should allow downloading invoice after successful purchase",
+              "timedOut": null,
+              "duration": 65832,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationexercise.com');\n// Verify home page is visible\ncy.get('.logo a>img').should('be.visible');\n//click signup/login button\ncy.contains('Signup / Login').click();\n// Fill all details in Signup and create account\ncy.contains('New User Signup!').should('be.visible');\ncy.get('[data-qa=\"signup-name\"]').type('Amir Hossain');\ncy.get('[data-qa=\"signup-email\"]').type('amir.swe@gmail.com');\ncy.get('[data-qa=\"signup-button\"]').click();\n// Fill in account details\n// Replace '#input' with the actual selectors for each input field\ncy.get('#id_gender1').type('Mr.');\ncy.get('[data-qa=\"password\"]').type('abubakkar90');\ncy.get('[data-qa=\"days\"]').select('1');\ncy.get('[data-qa=\"months\"]').select('January');\ncy.get('[data-qa=\"years\"]').select('1998');\ncy.get('#newsletter').check();\ncy.get('#optin').check();\ncy.get('[data-qa=\"first_name\"]').type('Amir');\ncy.get('[data-qa=\"last_name\"]').type('Hossain');\ncy.get('[data-qa=\"company\"]').type('Test Company');\ncy.get('[data-qa=\"address\"]').type('123 Test St');\ncy.get('[data-qa=\"address2\"]').type('Apt 4B');\ncy.get('#country').select('Canada');\ncy.get('[data-qa=\"state\"]').type('NY');\ncy.get('[data-qa=\"city\"]').type('New York');\ncy.get('[data-qa=\"zipcode\"]').type('10001');\ncy.get('[data-qa=\"mobile_number\"]').type('1234567890');\ncy.get('[data-qa=\"create-account\"]').click();\ncy.get('[data-qa=\"account-created\"]').contains('Account Created!');\ncy.get('[data-qa=\"continue-button\"]').click();\n// Verify ' Logged in as username' at top\ncy.contains('Logged in as Amir Hossain').should('be.visible');\n// add product\ncy.get('.product-image-wrapper .choose > ul >li >a').first().click();\n// Verify product detail is opened\ncy.get('.product-information').should('be.visible');\n// Increase quantity to 4\ncy.get('#quantity').clear().type('4');\n// Click 'Add to cart' button\ncy.get('.cart').click();\n// confirm the product\ncy.get('#cartModal > div > div > div.modal-footer > button').click();\n// Click 'View Cart' button\ncy.get('li [href=\"/view_cart\"]').click();\n// Verify cart page is displayed\ncy.get('.cart_info').should('be.visible');\n// Click 'Proceed To Checkout' button again\ncy.contains('Proceed To Checkout').click();\n// Enter description in comment text area and click 'Place Order'\ncy.get('#ordermsg').type('Test order with registration');\ncy.contains('Place Order').click();\n// Click 'Pay and Confirm Order' button\ncy.get('[data-qa=\"name-on-card\"]').type('Amir Hossain');\ncy.get('[data-qa=\"card-number\"]').type('5655-1814-0058-1255');\ncy.get('[data-qa=\"cvc\"]').type('588');\ncy.get('[data-qa=\"expiry-month\"]').type('08/33');\ncy.get('[data-qa=\"expiry-year\"]').type('2033');\ncy.get('[data-qa = \"pay-button\"]').click();\n// Verify success message 'Your order has been placed successfully!'\ncy.contains('Congratulations! Your order has been confirmed!').should('be.visible');\n//Download Invoice\ncy.contains('Download Invoice').click();\n//Click on Continue Button\ncy.contains('Continue').click();\n// Click 'Delete Account' button\ncy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(5) > a').click();\n// Verify 'ACCOUNT DELETED!' and click 'Continue' button\ncy.get('[data-qa=\"account-deleted\"]').contains('Account Deleted!');\ncy.get('[data-qa=\"continue-button\"]').click();",
+              "err": {},
+              "uuid": "0328d986-3fe6-417c-96a3-d1f745d62eeb",
+              "parentUUID": "d28f9ccb-fe05-4264-8f51-0e5ce9fa551a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0328d986-3fe6-417c-96a3-d1f745d62eeb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 65832,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
