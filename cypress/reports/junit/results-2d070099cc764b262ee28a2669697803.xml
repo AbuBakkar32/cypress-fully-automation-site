@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="41.832" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2024-07-05T06:45:13" tests="0" file="cypress\e2e\verify_address_details_in_checkout_page.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="Verify address details in checkout page" timestamp="2024-07-05T06:45:14" tests="1" time="41.329" failures="0">
-    <testcase name="Verify address details in checkout page Register before cart adds products and Verify address details in checkout page" time="35.400" classname="Register before cart adds products and Verify address details in checkout page">
-    </testcase>
-  </testsuite>
-</testsuites>
