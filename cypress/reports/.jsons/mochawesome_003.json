@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-07-11T06:55:26.139Z",
-    "end": "2024-07-11T06:55:46.813Z",
-    "duration": 20674,
+    "start": "2024-07-12T16:04:57.223Z",
+    "end": "2024-07-12T16:06:09.010Z",
+    "duration": 71787,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b0564f58-5859-46cd-9be4-1b56aa14c5df",
+      "uuid": "9a4dba1a-c616-401b-b03b-f4edc6117aba",
       "title": "",
       "fullFile": "cypress\\e2e\\contact_us.cy.js",
       "file": "cypress\\e2e\\contact_us.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "80f5b196-6a6d-4e66-bbca-28f1f847a4c8",
+          "uuid": "9cc097ea-d0cf-4f57-aaee-7ed5ec3699a9",
           "title": "Contact Us Form",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Contact Us Form validation checking....",
               "fullTitle": "Contact Us Form Contact Us Form validation checking....",
               "timedOut": null,
-              "duration": 15103,
+              "duration": 64633,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "// Step 1: Launch browser\n// Cypress automatically launches the browser\n// Step 2: Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// Step 3: Verify that home page is visible successfully\ncy.url().should('include', 'automationexercise');\n// Step 4: Click on 'Contact Us' button\ncy.contains('Contact us').click();\n// Step 5: Verify 'GET IN TOUCH' is visible\ncy.get('#contact-page > div.row > div.col-sm-8 > div > h2').should('contain', 'Get In Touch');\n// Step 6: Enter name, email, subject and message\ncy.get('[data-qa=\"name\"]').type('Test User');\ncy.get('[data-qa=\"email\"]').type('testuser@example.com');\ncy.get('[data-qa=\"subject\"]').type('Test Subject');\ncy.get('[data-qa=\"message\"]').type('Test Message');\n// Step 7: Upload file\nconst fileName = './reports/unittest.pdf';\ncy.get('input[type=file]').selectFile(fileName);\n// Step 8: Click 'Submit' button\ncy.get('[data-qa=\"submit-button\"]').click();\n// Step 9: Click OK button\ncy.on('window:confirm', () => true);\n// Step 10: Verify success message 'Success! Your details have been submitted successfully.' is visible\ncy.get('.status ').should('contain', 'Success! Your details have been submitted successfully.');\n// Step 11: Click 'Home' button and verify that landed to home page successfully\ncy.get('#form-section > a > span > i').click();\ncy.url().should('include', 'automationexercise');",
               "err": {},
-              "uuid": "0adb308c-6eb0-432e-a7c3-a6fe5a8cc295",
-              "parentUUID": "80f5b196-6a6d-4e66-bbca-28f1f847a4c8",
+              "uuid": "66080538-ac14-4380-8384-c39df826bcd0",
+              "parentUUID": "9cc097ea-d0cf-4f57-aaee-7ed5ec3699a9",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "0adb308c-6eb0-432e-a7c3-a6fe5a8cc295"
+            "66080538-ac14-4380-8384-c39df826bcd0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 15103,
+          "duration": 64633,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
