@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="29.033" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2024-07-14T04:21:17" tests="0" file="cypress\e2e\place_order_login_before_checkout.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Place Order: Register Before Checkout" timestamp="2024-07-14T04:21:18" tests="1" time="28.435" failures="1">
+    <testcase name="Place Order: Register Before Checkout &quot;before all&quot; hook: Registration before login to the system and purchase product for &quot;Register before cart adds products into the cart, and process shippment&quot;" time="0.000" classname="&quot;before all&quot; hook: Registration before login to the system and purchase product for &quot;Register before cart adds products into the cart, and process shippment&quot;">
+      <failure message="Timed out retrying after 4000ms: Expected to find element: `#id_gender1`, but never found it.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Place Order: Register Befor...`" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender1`, but never found it.
+
+Because this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Place Order: Register Befor...`
+    at Context.eval (webpack:///./cypress/e2e/place_order_login_before_checkout.cy.js:21:11)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
