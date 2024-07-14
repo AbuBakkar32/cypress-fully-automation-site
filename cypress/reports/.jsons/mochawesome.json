@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-07-12T15:59:28.608Z",
-    "end": "2024-07-12T16:01:07.470Z",
-    "duration": 98862,
+    "start": "2024-07-14T04:15:44.851Z",
+    "end": "2024-07-14T04:16:12.618Z",
+    "duration": 27767,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "932ae15f-17e3-4806-bb7d-91949972fe8a",
+      "uuid": "f9f78dc7-33e3-4f68-8555-e9fb758993e3",
       "title": "",
       "fullFile": "cypress\\e2e\\add_product_cart.cy.js",
       "file": "cypress\\e2e\\add_product_cart.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4ab2f413-ea98-4d34-80de-1cbf9da430c5",
+          "uuid": "75a97583-f455-42fb-8c66-a3b313db5a82",
           "title": "Test Case 12: Add Products in Cart",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Add Products in Cart",
               "fullTitle": "Test Case 12: Add Products in Cart Add Products in Cart",
               "timedOut": null,
-              "duration": 91159,
+              "duration": 17875,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "// Step 1: Launch browser\n// Cypress automatically launches the browser\n// Step 2: Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// Step 3: Verify that home page is visible successfully\ncy.url().should('include', 'automationexercise');\n// Step 4: Click 'Products' button\ncy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(2) > a').click();\n// Step 5: Hover over first product and click 'Add to cart'\ncy.xpath('/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[1]').trigger('mouseover').xpath('/html/body/section[2]/div/div/div[2]/div/div[2]/div/div[1]/div[1]/a').click();\n// Step 6: Click 'Continue Shopping' button\ncy.get('#cartModal > div > div > div.modal-footer > button').click();\n// Step 7: Hover over second product and click 'Add to cart'\ncy.xpath('/html/body/section[2]/div/div/div[2]/div/div[3]/div/div[1]').trigger('mouseover').xpath('/html/body/section[2]/div/div/div[2]/div/div[3]/div/div[1]/div[1]/a').click();\ncy.get('#cartModal > div > div > div.modal-footer > button').click();\n// Step 8: Click 'View Cart' button\ncy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(3) > a').click();\n// Step 9: Verify both products are added to Cart\ncy.get('#cart_info_table > tbody').find('.cart_product').should('have.length', 2);\n// Step 10: Verify their prices, quantity and total price\n// Assuming each product has a 'price' class and the total price has a 'total-price' class\ncy.get('tbody > tr').each($el => {\n  const price = parseFloat($el.find('.cart_price').text().replace(/[^0-9.-]+/g, \"\")) * 1000;\n  const quantity = parseInt($el.find('.cart_quantity').text());\n  const totalPrice = price * quantity;\n  // Find total price of each product and match is equal to price * quantity\n  const total = parseFloat($el.find('.cart_total_price').text().replace(/[^0-9.-]+/g, \"\")) * 1000;\n  expect(total).to.equal(totalPrice);\n});",
               "err": {},
-              "uuid": "f92c5314-d917-42c0-837f-cae2afed2bd9",
-              "parentUUID": "4ab2f413-ea98-4d34-80de-1cbf9da430c5",
+              "uuid": "c7819ad9-250c-4282-981c-b6fa02840c13",
+              "parentUUID": "75a97583-f455-42fb-8c66-a3b313db5a82",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f92c5314-d917-42c0-837f-cae2afed2bd9"
+            "c7819ad9-250c-4282-981c-b6fa02840c13"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 91159,
+          "duration": 17875,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

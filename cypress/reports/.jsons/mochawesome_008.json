@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-07-12T16:11:18.228Z",
-    "end": "2024-07-12T16:12:14.868Z",
-    "duration": 56640,
+    "start": "2024-07-14T04:21:17.409Z",
+    "end": "2024-07-14T04:21:46.442Z",
+    "duration": 29033,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "4ad07b3f-4651-440e-bcef-46b4460097e5",
+      "uuid": "e87eb481-1981-40ce-811a-99dd56fccf11",
       "title": "",
       "fullFile": "cypress\\e2e\\place_order_login_before_checkout.cy.js",
       "file": "cypress\\e2e\\place_order_login_before_checkout.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "7d63d875-6ada-4ea2-9c36-d50cea638234",
+          "uuid": "ad524d02-26de-4ef8-8b9b-eb23366b17ef",
           "title": "Place Order: Register Before Checkout",
           "fullFile": "",
           "file": "",
@@ -38,21 +38,21 @@
               "title": "Register before cart adds products into the cart, and process shippment",
               "fullTitle": "Place Order: Register Before Checkout Register before cart adds products into the cart, and process shippment",
               "timedOut": null,
-              "duration": 48057,
+              "duration": 18863,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\place_order_login_before_checkout.cy.js\\\\Place Order Register Before Checkout -- Register before cart adds products into the cart, and process shippment -- before all hook Registration before login to the system and purchase product (failed) (2).png\"\n    ]\n  ]\n}",
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\place_order_login_before_checkout.cy.js\\\\Place Order Register Before Checkout -- Register before cart adds products into the cart, and process shippment -- before all hook Registration before login to the system and purchase product (failed) (3).png\"\n    ]\n  ]\n}",
               "code": "cy.visit('http://automationexercise.com');\n// Verify home page is visible\ncy.get('.logo a>img').should('be.visible');\n//click signup/login button\ncy.contains('Logout').click();\n// Fill up Login to your account\ncy.contains('Login to your account').should('be.visible');\n// Replace '#email' and '#password' with the actual selectors for each input field\ncy.get('[data-qa=\"login-email\"]').type('amir.swe@gmail.com');\ncy.get('[data-qa=\"login-password\"]').type('abubakkar90');\ncy.get('[data-qa=\"login-button\"]').click();\n// Verify ' Logged in as username' at top\ncy.contains('Logged in as').should('be.visible');\n// add product\ncy.get('.product-image-wrapper .choose > ul >li >a').first().click();\n// Verify product detail is opened\ncy.get('.product-information').should('be.visible');\n// Increase quantity to 4\ncy.get('#quantity').clear().type('4');\n// Click 'Add to cart' button\ncy.get('.cart').click();\n// confirm the product\ncy.get('#cartModal > div > div > div.modal-footer > button').click();\n// Click 'View Cart' button\ncy.get('li [href=\"/view_cart\"]').click();\n// Verify cart page is displayed\ncy.get('.cart_info').should('be.visible');\n// Click 'Proceed To Checkout' button again\ncy.contains('Proceed To Checkout').click();\n// Enter description in comment text area and click 'Place Order'\ncy.get('#ordermsg').type('Test order with registration');\ncy.contains('Place Order').click();\n// Click 'Pay and Confirm Order' button\ncy.get('[data-qa=\"name-on-card\"]').type('Amir Hossain');\ncy.get('[data-qa=\"card-number\"]').type('5655-1814-0058-1255');\ncy.get('[data-qa=\"cvc\"]').type('588');\ncy.get('[data-qa=\"expiry-month\"]').type('08/33');\ncy.get('[data-qa=\"expiry-year\"]').type('2033');\ncy.get('[data-qa = \"pay-button\"]').click();\n// Verify success message 'Your order has been placed successfully!'\ncy.contains('Congratulations! Your order has been confirmed!').should('be.visible');\n// Click 'Delete Account' button\ncy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(5) > a').click();\n// Verify 'ACCOUNT DELETED!' and click 'Continue' button\ncy.get('[data-qa=\"account-deleted\"]').contains('Account Deleted!');\ncy.get('[data-qa=\"continue-button\"]').click();",
               "err": {
                 "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender1`, but never found it.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Place Order: Register Befor...`",
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender1`, but never found it.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Place Order: Register Befor...`\n    at Context.eval (webpack:///./cypress/e2e/place_order_login_before_checkout.cy.js:21:11)",
                 "diff": null
               },
-              "uuid": "b0277ab8-2688-42d5-a25e-b3c85e98690d",
-              "parentUUID": "7d63d875-6ada-4ea2-9c36-d50cea638234",
+              "uuid": "e53677c6-7b4c-445f-8337-41dd12419534",
+              "parentUUID": "ad524d02-26de-4ef8-8b9b-eb23366b17ef",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "b0277ab8-2688-42d5-a25e-b3c85e98690d"
+            "e53677c6-7b4c-445f-8337-41dd12419534"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 48057,
+          "duration": 18863,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

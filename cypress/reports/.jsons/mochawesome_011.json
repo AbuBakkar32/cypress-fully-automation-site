@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-07-12T16:14:49.081Z",
-    "end": "2024-07-12T16:15:33.942Z",
-    "duration": 44861,
+    "start": "2024-07-14T04:23:38.759Z",
+    "end": "2024-07-14T04:24:00.402Z",
+    "duration": 21643,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ba35ac14-48e3-4c08-ad7c-388c3d9b91c2",
+      "uuid": "bba1c4e4-cb0c-4316-914f-9c8eb17a96ba",
       "title": "",
       "fullFile": "cypress\\e2e\\register_existing_email.cy.js",
       "file": "cypress\\e2e\\register_existing_email.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e317150f-296f-4baa-9ba0-36c828977fb8",
+          "uuid": "1b419509-b27b-4377-8e5d-6fcc15a302be",
           "title": "Register User with existing email",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Register User with existing email",
               "fullTitle": "Register User with existing email Register User with existing email",
               "timedOut": null,
-              "duration": 37289,
+              "duration": 11112,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "// Step 1: Launch browser\n// Cypress automatically launches the browser\n// Step 2: Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// Step 3: Verify that home page is visible successfully\ncy.url().should('include', 'automationexercise');\n// Step 4: Click on 'Signup / Login' button\ncy.contains('Signup / Login').click();\n// Step 5: Verify 'New User Signup!' is visible\ncy.get('#form > div > div > div:nth-child(3) > div > h2').should('contain', 'New User Signup!');\n// Step 6: Enter name and already registered email address\ncy.get('[data-qa=\"signup-name\"]').type('abubakkar');\ncy.get('[data-qa=\"signup-email\"]').type('abu@gmail.com');\n// Step 7: Click 'Signup' button\ncy.get('[data-qa=\"signup-button\"]').click();\n// Step 8: Verify error 'Email Address already exist!' is visible\ncy.get('#form > div > div > div:nth-child(3) > div > form > p').should('contain', 'Email Address already exist!');",
               "err": {},
-              "uuid": "56d71b4b-01e5-495c-aae2-2a99cda39cdd",
-              "parentUUID": "e317150f-296f-4baa-9ba0-36c828977fb8",
+              "uuid": "07b6420b-d30b-4d11-8544-abddedab52f0",
+              "parentUUID": "1b419509-b27b-4377-8e5d-6fcc15a302be",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "56d71b4b-01e5-495c-aae2-2a99cda39cdd"
+            "07b6420b-d30b-4d11-8544-abddedab52f0"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 37289,
+          "duration": 11112,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
