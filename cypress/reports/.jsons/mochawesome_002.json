@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-07-14T04:17:17.274Z",
-    "end": "2024-07-14T04:17:39.755Z",
-    "duration": 22481,
+    "start": "2024-07-15T12:37:21.009Z",
+    "end": "2024-07-15T12:37:38.656Z",
+    "duration": 17647,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "5f887141-10af-47c0-adf2-e72bec342675",
+      "uuid": "f8f9527b-bf80-484e-be7d-b0130f42fa8a",
       "title": "",
       "fullFile": "cypress\\e2e\\add_to_cart_from_recommended_items.cy.js",
       "file": "cypress\\e2e\\add_to_cart_from_recommended_items.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "128ada13-9e1e-4e54-b387-2250dd652c64",
+          "uuid": "78278ed1-1441-41d1-a257-ca2fd01fbcf9",
           "title": "Add to cart from Recommended items",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "adds a recommended product to cart and verifies",
               "fullTitle": "Add to cart from Recommended items adds a recommended product to cart and verifies",
               "timedOut": null,
-              "duration": 13086,
+              "duration": 11148,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit('http://automationexercise.com');\n// Scroll to bottom of page\ncy.scrollTo('bottom');\n// Verify 'RECOMMENDED ITEMS' are visible\ncy.contains('recommended items').should('be.visible');\n// Click on 'Add To Cart' on the first Recommended product (adjust selector if needed)\ncy.get('#recommended-item-carousel div > a').first().click({\n  force: true\n}); // Assuming \"Add To Cart\" is next to product title\ncy.wait(2000);\n// Click on 'Continue Shopping' button\ncy.get('#cartModal > div > div > div.modal-footer > button').click({\n  force: true\n});\ncy.wait(1000);\n// Click on 'View Cart' button\ncy.get('.nav a[href=\"/view_cart\"]').click();\n// Verify that product is displayed in cart page and display none\ncy.get('#cart_info_table').should('be.visible').and('not.have.css', 'display', 'none');",
               "err": {},
-              "uuid": "a0037e42-c215-4531-b3b4-aa088a45a952",
-              "parentUUID": "128ada13-9e1e-4e54-b387-2250dd652c64",
+              "uuid": "4cd29bfe-503e-4c1f-b42a-167f0e647bc3",
+              "parentUUID": "78278ed1-1441-41d1-a257-ca2fd01fbcf9",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "a0037e42-c215-4531-b3b4-aa088a45a952"
+            "4cd29bfe-503e-4c1f-b42a-167f0e647bc3"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13086,
+          "duration": 11148,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

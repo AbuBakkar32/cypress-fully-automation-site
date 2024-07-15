@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-15T12:43:05.052Z",
+    "end": "2024-07-15T12:43:43.657Z",
+    "duration": 38605,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "18ba4758-fcfb-480a-9253-9f5ae69dc2f7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\search_products_and_verify_cart_after_login.cy.js",
+      "file": "cypress\\e2e\\search_products_and_verify_cart_after_login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "09604cfb-d2af-4f2f-afdf-274c4cd20434",
+          "title": "Search Products and Verify Cart After Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "searches products, adds to cart, verifies after login",
+              "fullTitle": "Search Products and Verify Cart After Login searches products, adds to cart, verifies after login",
+              "timedOut": null,
+              "duration": 31913,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationexercise.com');\n// Step 4: Click on 'Products' button\ncy.contains('Products').click();\n// Step 5: Verify user is navigated to ALL PRODUCTS page successfully\ncy.url().should('include', 'products');\n// Step 6: Enter product name in search input and click search button\nconst productName = 'dress';\ncy.get('#search_product').type(productName);\ncy.get('#submit_search').click();\n// Step 7: Verify 'SEARCHED PRODUCTS' is visible\ncy.contains('Searched Products').should('be.visible');\ncy.get('.features_items .col-sm-4').each($product => {\n  if ($product.text().toLowerCase().includes(productName)) {\n    // Find the 'add to cart' button within the current product\n    cy.wrap($product).find('.productinfo .add-to-cart').click();\n    // Find the 'Continue Shopping' button within the current product context (assuming it's displayed after adding to cart)\n    cy.get('#cartModal > div > div > div.modal-footer > button').click();\n  }\n});\n//click on Cart Menu\ncy.get('.nav a[href=\"/view_cart\"]').click();\n// Step 9: Verify both products are added to Cart\ncy.get('#cart_info_table > tbody > tr').should('have.visible');\n// Click on 'Signup / Login' button\ncy.contains('Signup / Login').click();\n// Verify user is navigated to login page\ncy.contains('Login to your account');\n// Replace '#email' and '#password' with the actual selectors for each input field\ncy.get('[data-qa=\"login-email\"]').type('preaus@gmail.com');\ncy.get('[data-qa=\"login-password\"]').type('123456');\ncy.get('[data-qa=\"login-button\"]').click();\ncy.contains('Logged in as Preaus Sarkar').should('be.visible');\n//click on Cart Menu\ncy.get('.nav a[href=\"/view_cart\"]').click();\n//Verify both products are added to Cart are equal to 7\ncy.get('#cart_info_table > tbody > tr').should('have.visible');",
+              "err": {},
+              "uuid": "6b222eaf-befb-4e84-b1db-33e806af82ef",
+              "parentUUID": "09604cfb-d2af-4f2f-afdf-274c4cd20434",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6b222eaf-befb-4e84-b1db-33e806af82ef"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 31913,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

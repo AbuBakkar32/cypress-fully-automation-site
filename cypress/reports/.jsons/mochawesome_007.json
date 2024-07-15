@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-07-14T04:20:38.648Z",
-    "end": "2024-07-14T04:21:06.570Z",
-    "duration": 27922,
+    "start": "2024-07-15T12:39:26.946Z",
+    "end": "2024-07-15T12:39:46.720Z",
+    "duration": 19774,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "85891f21-e92a-4fed-a541-50868fd4828c",
+      "uuid": "ed809191-2a37-4385-9c78-65509c7e956e",
       "title": "",
       "fullFile": "cypress\\e2e\\logout_user.cy.js",
       "file": "cypress\\e2e\\logout_user.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4f239103-99d4-481a-843a-e461be0cee03",
+          "uuid": "d3c3dd97-949d-4bdc-8f5b-bef27b5bf603",
           "title": "Logout User",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should login and logout a user",
               "fullTitle": "Logout User should login and logout a user",
               "timedOut": null,
-              "duration": 17200,
+              "duration": 13535,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit('http://automationexercise.com');\ncy.contains('Signup / Login').click();\ncy.contains('Login to your account');\n// Replace '#email' and '#password' with the actual selectors for each input field\ncy.get('[data-qa=\"login-email\"]').type('preaus@gmail.com');\ncy.get('[data-qa=\"login-password\"]').type('123456');\ncy.get('[data-qa=\"login-button\"]').click();\ncy.contains('Logged in as Preaus Sarkar').should('be.visible');\ncy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(4)').click();\n// Replace '#loginPage' with the actual selector or condition that verifies the user is on the login page\ncy.get('#form > div > div > div.col-sm-4.col-sm-offset-1 > div > h2').should('be.visible');",
               "err": {},
-              "uuid": "97dee44f-8f84-48ec-b3bd-842a723bb6cd",
-              "parentUUID": "4f239103-99d4-481a-843a-e461be0cee03",
+              "uuid": "d6358022-fa33-444f-839d-23f61a421e6c",
+              "parentUUID": "d3c3dd97-949d-4bdc-8f5b-bef27b5bf603",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "97dee44f-8f84-48ec-b3bd-842a723bb6cd"
+            "d6358022-fa33-444f-839d-23f61a421e6c"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 17200,
+          "duration": 13535,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

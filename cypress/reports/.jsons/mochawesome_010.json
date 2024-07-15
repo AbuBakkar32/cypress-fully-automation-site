@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-07-14T04:22:49.331Z",
-    "end": "2024-07-14T04:23:23.200Z",
-    "duration": 33869,
+    "start": "2024-07-15T12:40:42.407Z",
+    "end": "2024-07-15T12:41:08.417Z",
+    "duration": 26010,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ea0b6d8c-142f-45f6-8f0f-2154e7dbbb06",
+      "uuid": "6aa7ef93-a6e0-4c06-8180-a1ad5f749a25",
       "title": "",
       "fullFile": "cypress\\e2e\\place_order_while_checkout.cy.js",
       "file": "cypress\\e2e\\place_order_while_checkout.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "0b26ec77-8b43-42e5-a3c4-b3b46573b661",
+          "uuid": "5e8286cd-aa8d-408f-912f-eb02e57a428c",
           "title": "Place Order: Register while Checkout",
           "fullFile": "",
           "file": "",
@@ -38,21 +38,21 @@
               "title": "adds products into the cart, register, and shipping",
               "fullTitle": "Place Order: Register while Checkout adds products into the cart, register, and shipping",
               "timedOut": null,
-              "duration": 23251,
+              "duration": 19583,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\place_order_while_checkout.cy.js\\\\Place Order Register while Checkout -- adds products into the cart, register, and shipping (failed) (2).png\"\n    ]\n  ]\n}",
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\place_order_while_checkout.cy.js\\\\Place Order Register while Checkout -- adds products into the cart, register, and shipping (failed) (3).png\"\n    ]\n  ]\n}",
               "code": "cy.visit('http://automationexercise.com');\n// Verify home page is visible\ncy.get('.logo a>img').should('be.visible');\n// add product\ncy.get('.product-image-wrapper .choose > ul >li >a').first().click();\n// Verify product detail is opened\ncy.get('.product-information').should('be.visible');\n// Increase quantity to 4\ncy.get('#quantity').clear().type('4');\n// Click 'Add to cart' button\ncy.get('.cart').click();\n// confirm the product\ncy.get('#cartModal > div > div > div.modal-footer > button').click();\n// Click 'View Cart' button\ncy.get('li [href=\"/view_cart\"]').click();\n// Verify cart page is displayed\ncy.get('.cart_info').should('be.visible');\n// Click 'Proceed To Checkout' button\ncy.contains('Proceed To Checkout').click();\n// Click 'Register / Login' button\ncy.get('#checkoutModal > div > div > div.modal-body > p:nth-child(2) > a').click();\n// Fill all details in Signup and create account\ncy.contains('New User Signup!');\ncy.get('[data-qa=\"signup-name\"]').type('Amir Hossain');\ncy.get('[data-qa=\"signup-email\"]').type('amir.swe@gmail.com');\ncy.get('[data-qa=\"signup-button\"]').click();\n// Fill in account details\n// Replace '#input' with the actual selectors for each input field\ncy.get('#id_gender1').type('Mr.');\ncy.get('[data-qa=\"password\"]').type('abubakkar90');\ncy.get('[data-qa=\"days\"]').select('1');\ncy.get('[data-qa=\"months\"]').select('January');\ncy.get('[data-qa=\"years\"]').select('1998');\ncy.get('#newsletter').check();\ncy.get('#optin').check();\ncy.get('[data-qa=\"first_name\"]').type('Amir');\ncy.get('[data-qa=\"last_name\"]').type('Hossain');\ncy.get('[data-qa=\"company\"]').type('Test Company');\ncy.get('[data-qa=\"address\"]').type('123 Test St');\ncy.get('[data-qa=\"address2\"]').type('Apt 4B');\ncy.get('#country').select('Canada');\ncy.get('[data-qa=\"state\"]').type('NY');\ncy.get('[data-qa=\"city\"]').type('New York');\ncy.get('[data-qa=\"zipcode\"]').type('10001');\ncy.get('[data-qa=\"mobile_number\"]').type('1234567890');\ncy.get('[data-qa=\"create-account\"]').click();\ncy.get('[data-qa=\"account-created\"]').contains('Account Created!');\ncy.get('[data-qa=\"continue-button\"]').click();\n// Verify ' Logged in as username' at top\ncy.contains('Logged in as Amir Hossain');\n// Click 'Cart' button again\ncy.get('li [href=\"/view_cart\"]').click();\n// Click 'Proceed To Checkout' button again\ncy.contains('Proceed To Checkout').click();\n// Enter description in comment text area and click 'Place Order'\ncy.get('#ordermsg').type('Test order with registration');\ncy.contains('Place Order').click();\n// Click 'Pay and Confirm Order' button\ncy.get('[data-qa=\"name-on-card\"]').type('Amir Hossain');\ncy.get('[data-qa=\"card-number\"]').type('5655-1814-0058-1255');\ncy.get('[data-qa=\"cvc\"]').type('588');\ncy.get('[data-qa=\"expiry-month\"]').type('08/33');\ncy.get('[data-qa=\"expiry-year\"]').type('2033');\ncy.get('[data-qa = \"pay-button\"]').click();\n// Verify success message 'Your order has been placed successfully!'\ncy.contains('Congratulations! Your order has been confirmed!').should('be.visible');\n// Click 'Delete Account' button\ncy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(5) > a').click();\n// Verify 'ACCOUNT DELETED!' and click 'Continue' button\ncy.get('[data-qa=\"account-deleted\"]').contains('Account Deleted!');\ncy.get('[data-qa=\"continue-button\"]').click();",
               "err": {
                 "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender1`, but never found it.",
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender1`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/place_order_while_checkout.cy.js:44:11)",
                 "diff": null
               },
-              "uuid": "c2a05d32-f07a-4320-b08a-1d2ab84de959",
-              "parentUUID": "0b26ec77-8b43-42e5-a3c4-b3b46573b661",
+              "uuid": "e3f41997-3931-46c7-973e-92c9772532c0",
+              "parentUUID": "5e8286cd-aa8d-408f-912f-eb02e57a428c",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "c2a05d32-f07a-4320-b08a-1d2ab84de959"
+            "e3f41997-3931-46c7-973e-92c9772532c0"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 23251,
+          "duration": 19583,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

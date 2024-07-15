@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-07-14T04:19:09.631Z",
-    "end": "2024-07-14T04:19:36.412Z",
-    "duration": 26781,
+    "start": "2024-07-15T12:38:38.579Z",
+    "end": "2024-07-15T12:38:55.917Z",
+    "duration": 17338,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8254d6e8-7f31-4163-97a1-9b816f8eae5e",
+      "uuid": "5144ff71-044f-4854-b005-cae8fa7fd112",
       "title": "",
       "fullFile": "cypress\\e2e\\invalid_login.cy.js",
       "file": "cypress\\e2e\\invalid_login.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "5209487e-5ace-4112-a496-5712e2a95084",
+          "uuid": "33921e45-c3e5-4b11-a025-89f587bc21de",
           "title": "Login User",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "should fail to login with incorrect email and password",
               "fullTitle": "Login User should fail to login with incorrect email and password",
               "timedOut": null,
-              "duration": 16510,
+              "duration": 10752,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "cy.visit('http://automationexercise.com');\ncy.contains('Signup / Login').click();\ncy.contains('Login to your account');\n// Replace '#email' and '#password' with the actual selectors for each input field\ncy.get('[data-qa=\"login-email\"]').type('incorrect@example.com');\ncy.get('[data-qa=\"login-password\"]').type('incorrectpassword');\ncy.get('[data-qa=\"login-button\"]').click();\ncy.contains('Your email or password is incorrect!').should('be.visible');",
               "err": {},
-              "uuid": "cd16f17e-d3f6-42ce-81fa-741841190ed0",
-              "parentUUID": "5209487e-5ace-4112-a496-5712e2a95084",
+              "uuid": "a8e951cf-57a5-455e-b2ff-9ac1079a537b",
+              "parentUUID": "33921e45-c3e5-4b11-a025-89f587bc21de",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "cd16f17e-d3f6-42ce-81fa-741841190ed0"
+            "a8e951cf-57a5-455e-b2ff-9ac1079a537b"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 16510,
+          "duration": 10752,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
