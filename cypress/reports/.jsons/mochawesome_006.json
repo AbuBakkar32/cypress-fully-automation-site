@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-07-14T04:19:58.497Z",
-    "end": "2024-07-14T04:20:28.471Z",
-    "duration": 29974,
+    "start": "2024-07-15T12:39:01.245Z",
+    "end": "2024-07-15T12:39:21.776Z",
+    "duration": 20531,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "83a53134-9f5a-40d5-a0ff-3d59fbc9d1db",
+      "uuid": "5223a5b6-156b-4618-bc89-05b9e7103996",
       "title": "",
       "fullFile": "cypress\\e2e\\login_user.cy.js",
       "file": "cypress\\e2e\\login_user.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "bda7cb82-f54e-4134-acbe-a6c9553da759",
+          "uuid": "5e403f25-a134-4c9a-9c61-36e39181b966",
           "title": "Login User",
           "fullFile": "",
           "file": "",
@@ -38,21 +38,21 @@
               "title": "should login and delete a user",
               "fullTitle": "Login User should login and delete a user",
               "timedOut": null,
-              "duration": 16839,
+              "duration": 13878,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\login_user.cy.js\\\\Login User -- should login and delete a user -- before all hook Registration before login to the system (failed) (4).png\"\n    ]\n  ]\n}",
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\login_user.cy.js\\\\Login User -- should login and delete a user -- before all hook Registration before login to the system (failed) (5).png\"\n    ]\n  ]\n}",
               "code": "cy.visit('http://automationexercise.com');\ncy.contains('Logout').click();\ncy.contains('Login to your account').should('be.visible');\n// Replace '#email' and '#password' with the actual selectors for each input field\ncy.get('[data-qa=\"login-email\"]').type('amir.swe@gmail.com');\ncy.get('[data-qa=\"login-password\"]').type('abubakkar90');\ncy.get('[data-qa=\"login-button\"]').click();\ncy.contains('Logged in as Amir Hossain').should('be.visible');\ncy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(5) > a').click();\ncy.get('[data-qa=\"account-deleted\"]').contains('Account Deleted!');",
               "err": {
                 "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender1`, but never found it.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Login User`",
                 "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender1`, but never found it.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Login User`\n    at Context.eval (webpack:///./cypress/e2e/login_user.cy.js:20:11)",
                 "diff": null
               },
-              "uuid": "231207f9-dcfa-4bbd-aaea-4d3f463ce084",
-              "parentUUID": "bda7cb82-f54e-4134-acbe-a6c9553da759",
+              "uuid": "b7b965b7-a419-45c4-bbb9-1e9643cf251f",
+              "parentUUID": "5e403f25-a134-4c9a-9c61-36e39181b966",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "231207f9-dcfa-4bbd-aaea-4d3f463ce084"
+            "b7b965b7-a419-45c4-bbb9-1e9643cf251f"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 16839,
+          "duration": 13878,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
