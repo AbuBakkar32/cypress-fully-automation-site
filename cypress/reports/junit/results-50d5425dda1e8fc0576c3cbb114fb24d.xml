@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="23.055" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2024-07-16T12:05:22" tests="0" file="cypress\e2e\verify_address_details_in_checkout_page.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Verify address details in checkout page" timestamp="2024-07-16T12:05:23" tests="1" time="22.561" failures="1">
+    <testcase name="Verify address details in checkout page Register before cart adds products and Verify address details in checkout page" time="0.000" classname="Register before cart adds products and Verify address details in checkout page">
+      <failure message="Timed out retrying after 4000ms: Expected to find element: `#id_gender1`, but never found it." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender1`, but never found it.
+    at Context.eval (webpack:///./cypress/e2e/verify_address_details_in_checkout_page.cy.js:20:11)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
