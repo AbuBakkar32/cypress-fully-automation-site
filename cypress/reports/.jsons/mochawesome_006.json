@@ -1,0 +1,115 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-07-17T05:51:02.319Z",
+    "end": "2024-07-17T05:51:29.182Z",
+    "duration": 26863,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "85aa9add-fc61-40af-8bd1-7030eeef3e0d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login_user.cy.js",
+      "file": "cypress\\e2e\\login_user.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7cac897d-3251-4e2f-bc31-080b14cf08d6",
+          "title": "Login User",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should login and delete a user",
+              "fullTitle": "Login User should login and delete a user",
+              "timedOut": null,
+              "duration": 16670,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\login_user.cy.js\\\\Login User -- should login and delete a user -- before all hook Registration before login to the system (failed) (7).png\"\n    ]\n  ]\n}",
+              "code": "cy.visit('http://automationexercise.com');\ncy.contains('Logout').click();\ncy.contains('Login to your account').should('be.visible');\n// Replace '#email' and '#password' with the actual selectors for each input field\ncy.get('[data-qa=\"login-email\"]').type('amir.swe@gmail.com');\ncy.get('[data-qa=\"login-password\"]').type('abubakkar90');\ncy.get('[data-qa=\"login-button\"]').click();\ncy.contains('Logged in as Amir Hossain').should('be.visible');\ncy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(5) > a').click();\ncy.get('[data-qa=\"account-deleted\"]').contains('Account Deleted!');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender1`, but never found it.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Login User`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender1`, but never found it.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `Login User`\n    at Context.eval (webpack:///./cypress/e2e/login_user.cy.js:20:11)",
+                "diff": null
+              },
+              "uuid": "1cbf41e2-0fcc-4d7a-b12d-7d05bec19886",
+              "parentUUID": "7cac897d-3251-4e2f-bc31-080b14cf08d6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "1cbf41e2-0fcc-4d7a-b12d-7d05bec19886"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 16670,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
