@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-17T05:53:34.505Z",
+    "end": "2024-07-17T05:53:54.328Z",
+    "duration": 19823,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e9921db1-28e4-412c-b395-2580b5e290f9",
+      "title": "",
+      "fullFile": "cypress\\e2e\\register_existing_email.cy.js",
+      "file": "cypress\\e2e\\register_existing_email.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "55c4459b-48d8-4f85-b625-06307dd74bb8",
+          "title": "Register User with existing email",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Register User with existing email",
+              "fullTitle": "Register User with existing email Register User with existing email",
+              "timedOut": null,
+              "duration": 13294,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Step 1: Launch browser\n// Cypress automatically launches the browser\n// Step 2: Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// Step 3: Verify that home page is visible successfully\ncy.url().should('include', 'automationexercise');\n// Step 4: Click on 'Signup / Login' button\ncy.contains('Signup / Login').click();\n// Step 5: Verify 'New User Signup!' is visible\ncy.get('#form > div > div > div:nth-child(3) > div > h2').should('contain', 'New User Signup!');\n// Step 6: Enter name and already registered email address\ncy.get('[data-qa=\"signup-name\"]').type('abubakkar');\ncy.get('[data-qa=\"signup-email\"]').type('abu@gmail.com');\n// Step 7: Click 'Signup' button\ncy.get('[data-qa=\"signup-button\"]').click();\n// Step 8: Verify error 'Email Address already exist!' is visible\ncy.get('#form > div > div > div:nth-child(3) > div > form > p').should('contain', 'Email Address already exist!');",
+              "err": {},
+              "uuid": "f6d86c36-00ab-4fcd-a284-599271a1750a",
+              "parentUUID": "55c4459b-48d8-4f85-b625-06307dd74bb8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f6d86c36-00ab-4fcd-a284-599271a1750a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13294,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

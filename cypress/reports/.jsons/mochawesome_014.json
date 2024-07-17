@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-17T05:55:07.120Z",
+    "end": "2024-07-17T05:55:26.006Z",
+    "duration": 18886,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5c9d110c-ad56-450b-89ad-1c767fa15a9a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\search_product.cy.js",
+      "file": "cypress\\e2e\\search_product.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "43ab1c86-6b5a-4cba-a6d2-7830e1758d89",
+          "title": "Search Product",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Search Product and click search button to find all related products",
+              "fullTitle": "Search Product Search Product and click search button to find all related products",
+              "timedOut": null,
+              "duration": 13544,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Step 1: Launch browser\n// Cypress automatically launches the browser\n// Step 2: Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// Step 3: Verify that home page is visible successfully\ncy.url().should('include', 'automationexercise');\n// Step 4: Click on 'Products' button\ncy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(2) > a').click();\n// Step 5: Verify user is navigated to ALL PRODUCTS page successfully\ncy.url().should('include', 'products');\n// Step 6: Enter product name in search input and click search button\nconst productName = 'Dress';\ncy.get('#search_product').type(productName);\ncy.get('#submit_search').click();\n// Step 7: Verify 'SEARCHED PRODUCTS' is visible\ncy.xpath('/html/body/section[2]/div/div/div[2]/div/h2').should('contain', 'Searched');\n// For Partially matching text\n/*cy.get('body > section:nth-child(3) > div > div > div.col-sm-9.padding-right > div > h2').invoke('text').then((text) => {\n    expect(text.toLowerCase()).to.contain('searched');\n});*/\n// Step 8: Verify all the products related to search are visible\ncy.get('.productinfo').find('p').each($el => {\n  Cypress.on('uncaught:exception', (err, runnable) => {\n    cy.wrap($el).should('contain', productName);\n    return false;\n  });\n});",
+              "err": {},
+              "uuid": "6e6e0936-8cb4-4699-b2f0-1c19995bba1c",
+              "parentUUID": "43ab1c86-6b5a-4cba-a6d2-7830e1758d89",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6e6e0936-8cb4-4699-b2f0-1c19995bba1c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13544,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-17T05:49:07.581Z",
+    "end": "2024-07-17T05:49:31.613Z",
+    "duration": 24032,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8ddebe26-743a-4521-b45c-1190e3dddc06",
+      "title": "",
+      "fullFile": "cypress\\e2e\\add_to_cart_from_recommended_items.cy.js",
+      "file": "cypress\\e2e\\add_to_cart_from_recommended_items.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "deba55c3-2d92-463c-90b1-724d7c858bc1",
+          "title": "Add to cart from Recommended items",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "adds a recommended product to cart and verifies",
+              "fullTitle": "Add to cart from Recommended items adds a recommended product to cart and verifies",
+              "timedOut": null,
+              "duration": 16755,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationexercise.com');\n// Scroll to bottom of page\ncy.scrollTo('bottom');\n// Verify 'RECOMMENDED ITEMS' are visible\ncy.contains('recommended items').should('be.visible');\n// Click on 'Add To Cart' on the first Recommended product (adjust selector if needed)\ncy.get('#recommended-item-carousel div > a').first().click({\n  force: true\n}); // Assuming \"Add To Cart\" is next to product title\ncy.wait(2000);\n// Click on 'Continue Shopping' button\ncy.get('#cartModal > div > div > div.modal-footer > button').click({\n  force: true\n});\ncy.wait(1000);\n// Click on 'View Cart' button\ncy.get('.nav a[href=\"/view_cart\"]').click();\n// Verify that product is displayed in cart page and display none\ncy.get('#cart_info_table').should('be.visible').and('not.have.css', 'display', 'none');",
+              "err": {},
+              "uuid": "d4d4d050-8a50-4814-8583-772acb5d7c88",
+              "parentUUID": "deba55c3-2d92-463c-90b1-724d7c858bc1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d4d4d050-8a50-4814-8583-772acb5d7c88"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16755,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
