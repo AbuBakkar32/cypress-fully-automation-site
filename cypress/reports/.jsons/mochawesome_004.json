@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-07-17T05:50:09.324Z",
-    "end": "2024-07-17T05:50:33.285Z",
-    "duration": 23961,
+    "start": "2024-07-18T14:57:25.139Z",
+    "end": "2024-07-18T14:57:26.170Z",
+    "duration": 1031,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "252cc032-91da-4e41-aa69-f8f20b140885",
+      "uuid": "fd8fc8bd-1ee4-4c40-b920-e3630165e058",
       "title": "",
       "fullFile": "cypress\\e2e\\download_Invoice_after_purchase_order.cy.js",
       "file": "cypress\\e2e\\download_Invoice_after_purchase_order.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3ad92823-950a-4602-8b08-d07036236f7a",
+          "uuid": "1bb48fd6-adf0-44f0-b6e1-45e170249c4b",
           "title": "Download Invoice after purchase order",
           "fullFile": "",
           "file": "",
@@ -38,21 +38,21 @@
               "title": "should allow downloading invoice after successful purchase",
               "fullTitle": "Download Invoice after purchase order should allow downloading invoice after successful purchase",
               "timedOut": null,
-              "duration": 16815,
+              "duration": 840,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\download_Invoice_after_purchase_order.cy.js\\\\Download Invoice after purchase order -- should allow downloading invoice after successful purchase (failed) (7).png\"\n    ]\n  ]\n}",
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\download_Invoice_after_purchase_order.cy.js\\\\Download Invoice after purchase order -- should allow downloading invoice after successful purchase (failed) (8).png\"\n    ]\n  ]\n}",
               "code": "cy.visit('http://automationexercise.com');\n// Verify home page is visible\ncy.get('.logo a>img').should('be.visible');\n//click signup/login button\ncy.contains('Signup / Login').click();\n// Fill all details in Signup and create account\ncy.contains('New User Signup!').should('be.visible');\ncy.get('[data-qa=\"signup-name\"]').type('Amir Hossain');\ncy.get('[data-qa=\"signup-email\"]').type('amir.swe@gmail.com');\ncy.get('[data-qa=\"signup-button\"]').click();\n// Fill in account details\n// Replace '#input' with the actual selectors for each input field\ncy.get('#id_gender1').type('Mr.');\ncy.get('[data-qa=\"password\"]').type('abubakkar90');\ncy.get('[data-qa=\"days\"]').select('1');\ncy.get('[data-qa=\"months\"]').select('January');\ncy.get('[data-qa=\"years\"]').select('1998');\ncy.get('#newsletter').check();\ncy.get('#optin').check();\ncy.get('[data-qa=\"first_name\"]').type('Amir');\ncy.get('[data-qa=\"last_name\"]').type('Hossain');\ncy.get('[data-qa=\"company\"]').type('Test Company');\ncy.get('[data-qa=\"address\"]').type('123 Test St');\ncy.get('[data-qa=\"address2\"]').type('Apt 4B');\ncy.get('#country').select('Canada');\ncy.get('[data-qa=\"state\"]').type('NY');\ncy.get('[data-qa=\"city\"]').type('New York');\ncy.get('[data-qa=\"zipcode\"]').type('10001');\ncy.get('[data-qa=\"mobile_number\"]').type('1234567890');\ncy.get('[data-qa=\"create-account\"]').click();\ncy.get('[data-qa=\"account-created\"]').contains('Account Created!');\ncy.get('[data-qa=\"continue-button\"]').click();\n// Verify ' Logged in as username' at top\ncy.contains('Logged in as Amir Hossain').should('be.visible');\n// add product\ncy.get('.product-image-wrapper .choose > ul >li >a').first().click();\n// Verify product detail is opened\ncy.get('.product-information').should('be.visible');\n// Increase quantity to 4\ncy.get('#quantity').clear().type('4');\n// Click 'Add to cart' button\ncy.get('.cart').click();\n// confirm the product\ncy.get('#cartModal > div > div > div.modal-footer > button').click();\n// Click 'View Cart' button\ncy.get('li [href=\"/view_cart\"]').click();\n// Verify cart page is displayed\ncy.get('.cart_info').should('be.visible');\n// Click 'Proceed To Checkout' button again\ncy.contains('Proceed To Checkout').click();\n// Enter description in comment text area and click 'Place Order'\ncy.get('#ordermsg').type('Test order with registration');\ncy.contains('Place Order').click();\n// Click 'Pay and Confirm Order' button\ncy.get('[data-qa=\"name-on-card\"]').type('Amir Hossain');\ncy.get('[data-qa=\"card-number\"]').type('5655-1814-0058-1255');\ncy.get('[data-qa=\"cvc\"]').type('588');\ncy.get('[data-qa=\"expiry-month\"]').type('08/33');\ncy.get('[data-qa=\"expiry-year\"]').type('2033');\ncy.get('[data-qa = \"pay-button\"]').click();\n// Verify success message 'Your order has been placed successfully!'\ncy.contains('Congratulations! Your order has been confirmed!').should('be.visible');\n//Download Invoice\ncy.contains('Download Invoice').click();\n//Click on Continue Button\ncy.contains('Continue').click();\n// Click 'Delete Account' button\ncy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(5) > a').click();\n// Verify 'ACCOUNT DELETED!' and click 'Continue' button\ncy.get('[data-qa=\"account-deleted\"]').contains('Account Deleted!');\ncy.get('[data-qa=\"continue-button\"]').click();",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender1`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender1`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/download_Invoice_after_purchase_order.cy.js:20:11)",
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://automationexercise.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND automationexercise.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://automationexercise.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND automationexercise.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:3964/__cypress/runner/cypress_runner.js:131480:74)\n    at visitFailedByErr (http://localhost:3964/__cypress/runner/cypress_runner.js:130878:12)\n    at <unknown> (http://localhost:3964/__cypress/runner/cypress_runner.js:131479:11)\n    at tryCatcher (http://localhost:3964/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3964/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:3964/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:3964/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:3964/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:3964/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:3964/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:3964/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:3964/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/download_Invoice_after_purchase_order.cy.js:3:11)\n\nFrom Node.js Internals:\n  Error: getaddrinfo ENOTFOUND automationexercise.com\n      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:108:26)",
                 "diff": null
               },
-              "uuid": "321c969e-2084-4ff3-8893-26b2758ac6d8",
-              "parentUUID": "3ad92823-950a-4602-8b08-d07036236f7a",
+              "uuid": "c7fedae1-4de0-4d77-afd1-b17e166bc7ba",
+              "parentUUID": "1bb48fd6-adf0-44f0-b6e1-45e170249c4b",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "321c969e-2084-4ff3-8893-26b2758ac6d8"
+            "c7fedae1-4de0-4d77-afd1-b17e166bc7ba"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 16815,
+          "duration": 840,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
