@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2024-07-17T05:53:34.505Z",
-    "end": "2024-07-17T05:53:54.328Z",
-    "duration": 19823,
+    "failures": 1,
+    "start": "2024-07-18T14:58:11.657Z",
+    "end": "2024-07-18T14:58:12.809Z",
+    "duration": 1152,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e9921db1-28e4-412c-b395-2580b5e290f9",
+      "uuid": "a84ba8d2-8bc4-4027-876f-c1e9523823bb",
       "title": "",
       "fullFile": "cypress\\e2e\\register_existing_email.cy.js",
       "file": "cypress\\e2e\\register_existing_email.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "55c4459b-48d8-4f85-b625-06307dd74bb8",
+          "uuid": "f60c3f80-5c4f-403f-ba82-d30031ee977b",
           "title": "Register User with existing email",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,33 @@
               "title": "Register User with existing email",
               "fullTitle": "Register User with existing email Register User with existing email",
               "timedOut": null,
-              "duration": 13294,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 980,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
-              "context": null,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\register_existing_email.cy.js\\\\Register User with existing email -- Register User with existing email (failed) (1).png\"\n    ]\n  ]\n}",
               "code": "// Step 1: Launch browser\n// Cypress automatically launches the browser\n// Step 2: Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// Step 3: Verify that home page is visible successfully\ncy.url().should('include', 'automationexercise');\n// Step 4: Click on 'Signup / Login' button\ncy.contains('Signup / Login').click();\n// Step 5: Verify 'New User Signup!' is visible\ncy.get('#form > div > div > div:nth-child(3) > div > h2').should('contain', 'New User Signup!');\n// Step 6: Enter name and already registered email address\ncy.get('[data-qa=\"signup-name\"]').type('abubakkar');\ncy.get('[data-qa=\"signup-email\"]').type('abu@gmail.com');\n// Step 7: Click 'Signup' button\ncy.get('[data-qa=\"signup-button\"]').click();\n// Step 8: Verify error 'Email Address already exist!' is visible\ncy.get('#form > div > div > div:nth-child(3) > div > form > p').should('contain', 'Email Address already exist!');",
-              "err": {},
-              "uuid": "f6d86c36-00ab-4fcd-a284-599271a1750a",
-              "parentUUID": "55c4459b-48d8-4f85-b625-06307dd74bb8",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://automationexercise.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND automationexercise.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://automationexercise.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND automationexercise.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:3964/__cypress/runner/cypress_runner.js:131480:74)\n    at visitFailedByErr (http://localhost:3964/__cypress/runner/cypress_runner.js:130878:12)\n    at <unknown> (http://localhost:3964/__cypress/runner/cypress_runner.js:131479:11)\n    at tryCatcher (http://localhost:3964/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3964/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:3964/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:3964/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:3964/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:3964/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:3964/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:3964/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:3964/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/register_existing_email.cy.js:7:11)\n\nFrom Node.js Internals:\n  Error: getaddrinfo ENOTFOUND automationexercise.com\n      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:108:26)",
+                "diff": null
+              },
+              "uuid": "befbb4b4-cfd5-47d4-b95f-a16077907ea0",
+              "parentUUID": "f60c3f80-5c4f-403f-ba82-d30031ee977b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "f6d86c36-00ab-4fcd-a284-599271a1750a"
+          "passes": [],
+          "failures": [
+            "befbb4b4-cfd5-47d4-b95f-a16077907ea0"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13294,
+          "duration": 980,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

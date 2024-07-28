@@ -1,0 +1,115 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-07-18T15:00:01.388Z",
+    "end": "2024-07-18T15:00:02.462Z",
+    "duration": 1074,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e3d13f13-d587-4f59-a678-301670f03a49",
+      "title": "",
+      "fullFile": "cypress\\e2e\\api\\ApiChaining.cy.js",
+      "file": "cypress\\e2e\\api\\ApiChaining.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "413a022c-224d-4157-9100-ebcbb3bd5b57",
+          "title": "API Chaining",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should make API requests and chain them together",
+              "fullTitle": "API Chaining Should make API requests and chain them together",
+              "timedOut": null,
+              "duration": 904,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\api\\\\ApiChaining.cy.js\\\\API Chaining -- Should make API requests and chain them together (failed) (1).png\"\n    ]\n  ]\n}",
+              "code": "cy.request({\n  method: 'GET',\n  url: 'https://jsonplaceholder.typicode.com/posts/1'\n}).then(response => {\n  expect(response.status).to.eq(200);\n  return response.body.userId;\n}).then(userId => {\n  cy.request({\n    method: 'GET',\n    url: `https://jsonplaceholder.typicode.com/users/${userId}`\n  }).then(response => {\n    expect(response.status).to.eq(200);\n    expect(response.body.id).to.eq(1);\n    expect(response.body.name).to.eq('Leanne Graham');\n    expect(response.body.username).to.eq('Bret');\n  });\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` failed trying to load:\n\nhttps://jsonplaceholder.typicode.com/posts/1\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND jsonplaceholder.typicode.com\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://jsonplaceholder.typicode.com/posts/1\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` failed trying to load:\n\nhttps://jsonplaceholder.typicode.com/posts/1\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND jsonplaceholder.typicode.com\n\n-----------------------------------------------------------\n\nThe request we sent was:\n\nMethod: GET\nURL: https://jsonplaceholder.typicode.com/posts/1\n\n-----------------------------------------------------------\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nhttps://on.cypress.io/request\n    at <unknown> (http://localhost:3964/__cypress/runner/cypress_runner.js:133578:70)\n    at tryCatcher (http://localhost:3964/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (http://localhost:3964/__cypress/runner/cypress_runner.js:4203:37)\n    at tryCatcher (http://localhost:3964/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3964/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:3964/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:3964/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:3964/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:3964/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:3964/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:3964/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:3964/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/api/ApiChaining.cy.js:3:11)\n\nFrom Node.js Internals:\n  RequestError: Error: getaddrinfo ENOTFOUND jsonplaceholder.typicode.com\n      at new r (<embedded>:1831:405792)\n      at ee.callback (<embedded>:1831:411793)\n      at e.callback.s.callback [as _callback] (<embedded>:1831:411239)\n      at s._callback.s.callback.s.callback (<embedded>:2049:97858)\n      at ee.emit (node:events:514:28)\n      at ee.onRequestError (<embedded>:2049:106800)\n      at ClientRequest.emit (node:events:526:35)\n      at TLSSocket.socketErrorListener (node:_http_client:501:9)\n      at TLSSocket.emit (node:events:514:28)\n      at emitErrorNT (node:internal/streams/destroy:151:8)\n      at emitErrorCloseNT (node:internal/streams/destroy:116:3)\n      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)",
+                "diff": null
+              },
+              "uuid": "07cecd7a-9f69-4415-9955-dc785dc7db02",
+              "parentUUID": "413a022c-224d-4157-9100-ebcbb3bd5b57",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "07cecd7a-9f69-4415-9955-dc785dc7db02"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 904,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

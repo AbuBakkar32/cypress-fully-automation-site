@@ -1,0 +1,115 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-07-18T14:58:58.852Z",
+    "end": "2024-07-18T14:58:59.884Z",
+    "duration": 1032,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "40f9689f-7a89-483e-ac44-fc349ea54e6b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\verify_products.cy.js",
+      "file": "cypress\\e2e\\verify_products.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fc66269d-44f3-4cf2-aa9b-5fd2ac51bca4",
+          "title": "Test Case 8: Verify All Products and product detail page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify All Products and product detail page",
+              "fullTitle": "Test Case 8: Verify All Products and product detail page Verify All Products and product detail page",
+              "timedOut": null,
+              "duration": 845,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\verify_products.cy.js\\\\Test Case 8 Verify All Products and product detail page -- Verify All Products and product detail page (failed) (3).png\"\n    ]\n  ]\n}",
+              "code": "// Step 1: Launch browser\n// Cypress automatically launches the browser\n// Step 2: Navigate to url 'http://automationexercise.com'\ncy.visit('http://automationexercise.com');\n// Step 3: Verify that home page is visible successfully\ncy.url().should('include', 'automationexercise');\n// Step 4: Click on 'Products' button\ncy.get('#header > div > div > div > div.col-sm-8 > div > ul > li:nth-child(2) > a').click();\n// Step 5: Verify user is navigated to ALL PRODUCTS page successfully\ncy.url().should('include', 'products');\n// Step 6: The products list is visible\ncy.contains('All Products').should('be.visible');\n// Step 7: Click on 'View Product' of first product\ncy.get('.product-image-wrapper .choose > ul >li >a').first().click();\n// Step 8: User is landed to product detail page\ncy.url().should('include', 'product_details');\n// Step 9: Verify that detail detail is visible: product name, category, price, availability, condition, brand\ncy.get('body > section > div > div > div.col-sm-9.padding-right > div.product-details > div.col-sm-7 > div > h2').contains('Blue Top').should('be.visible');\ncy.get('body > section > div > div > div.col-sm-9.padding-right > div.product-details > div.col-sm-7 > div > p:nth-child(3)').contains('Category: Women > Tops').should('be.visible');\ncy.get('body > section > div > div > div.col-sm-9.padding-right > div.product-details > div.col-sm-7 > div > span > span').contains(\"Rs. 500\").should('be.visible');\ncy.get('body > section > div > div > div.col-sm-9.padding-right > div.product-details > div.col-sm-7 > div > p:nth-child(6)').contains('In Stock').should('be.visible');\ncy.get('body > section > div > div > div.col-sm-9.padding-right > div.product-details > div.col-sm-7 > div > p:nth-child(7)').contains('New').should('be.visible');\ncy.get('body > section > div > div > div.col-sm-9.padding-right > div.product-details > div.col-sm-7 > div > p:nth-child(8)').contains('Polo').should('be.visible');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://automationexercise.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND automationexercise.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://automationexercise.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND automationexercise.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:3964/__cypress/runner/cypress_runner.js:131480:74)\n    at visitFailedByErr (http://localhost:3964/__cypress/runner/cypress_runner.js:130878:12)\n    at <unknown> (http://localhost:3964/__cypress/runner/cypress_runner.js:131479:11)\n    at tryCatcher (http://localhost:3964/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3964/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:3964/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:3964/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:3964/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:3964/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:3964/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:3964/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:3964/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/verify_products.cy.js:7:11)\n\nFrom Node.js Internals:\n  Error: getaddrinfo ENOTFOUND automationexercise.com\n      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:108:26)",
+                "diff": null
+              },
+              "uuid": "b01653ae-a9ec-460d-a59e-b3bddfce6b82",
+              "parentUUID": "fc66269d-44f3-4cf2-aa9b-5fd2ac51bca4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b01653ae-a9ec-460d-a59e-b3bddfce6b82"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 845,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "reportDir": "cypress\\reports\\.jsons",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
