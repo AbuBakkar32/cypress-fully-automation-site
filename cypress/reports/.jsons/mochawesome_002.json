@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2024-07-17T05:49:07.581Z",
-    "end": "2024-07-17T05:49:31.613Z",
-    "duration": 24032,
+    "failures": 1,
+    "start": "2024-07-18T14:57:14.406Z",
+    "end": "2024-07-18T14:57:15.460Z",
+    "duration": 1054,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8ddebe26-743a-4521-b45c-1190e3dddc06",
+      "uuid": "751e70d1-e4ee-44b8-b802-3a74ece27dd9",
       "title": "",
       "fullFile": "cypress\\e2e\\add_to_cart_from_recommended_items.cy.js",
       "file": "cypress\\e2e\\add_to_cart_from_recommended_items.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "deba55c3-2d92-463c-90b1-724d7c858bc1",
+          "uuid": "32a0f791-9222-4d35-af7a-f3e237b7586e",
           "title": "Add to cart from Recommended items",
           "fullFile": "",
           "file": "",
@@ -38,29 +38,33 @@
               "title": "adds a recommended product to cart and verifies",
               "fullTitle": "Add to cart from Recommended items adds a recommended product to cart and verifies",
               "timedOut": null,
-              "duration": 16755,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 923,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
-              "context": null,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\add_to_cart_from_recommended_items.cy.js\\\\Add to cart from Recommended items -- adds a recommended product to cart and verifies (failed) (3).png\"\n    ]\n  ]\n}",
               "code": "cy.visit('http://automationexercise.com');\n// Scroll to bottom of page\ncy.scrollTo('bottom');\n// Verify 'RECOMMENDED ITEMS' are visible\ncy.contains('recommended items').should('be.visible');\n// Click on 'Add To Cart' on the first Recommended product (adjust selector if needed)\ncy.get('#recommended-item-carousel div > a').first().click({\n  force: true\n}); // Assuming \"Add To Cart\" is next to product title\ncy.wait(2000);\n// Click on 'Continue Shopping' button\ncy.get('#cartModal > div > div > div.modal-footer > button').click({\n  force: true\n});\ncy.wait(1000);\n// Click on 'View Cart' button\ncy.get('.nav a[href=\"/view_cart\"]').click();\n// Verify that product is displayed in cart page and display none\ncy.get('#cart_info_table').should('be.visible').and('not.have.css', 'display', 'none');",
-              "err": {},
-              "uuid": "d4d4d050-8a50-4814-8583-772acb5d7c88",
-              "parentUUID": "deba55c3-2d92-463c-90b1-724d7c858bc1",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://automationexercise.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND automationexercise.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://automationexercise.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND automationexercise.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:3964/__cypress/runner/cypress_runner.js:131480:74)\n    at visitFailedByErr (http://localhost:3964/__cypress/runner/cypress_runner.js:130878:12)\n    at <unknown> (http://localhost:3964/__cypress/runner/cypress_runner.js:131479:11)\n    at tryCatcher (http://localhost:3964/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3964/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:3964/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:3964/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:3964/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:3964/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:3964/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:3964/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:3964/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/add_to_cart_from_recommended_items.cy.js:3:11)\n\nFrom Node.js Internals:\n  Error: getaddrinfo ENOTFOUND automationexercise.com\n      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:108:26)",
+                "diff": null
+              },
+              "uuid": "341162ca-b76a-4ab7-854c-53d5b343686b",
+              "parentUUID": "32a0f791-9222-4d35-af7a-f3e237b7586e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "d4d4d050-8a50-4814-8583-772acb5d7c88"
+          "passes": [],
+          "failures": [
+            "341162ca-b76a-4ab7-854c-53d5b343686b"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 16755,
+          "duration": 923,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
