@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-07-18T14:57:14.406Z",
-    "end": "2024-07-18T14:57:15.460Z",
-    "duration": 1054,
+    "start": "2024-07-29T15:11:16.157Z",
+    "end": "2024-07-29T15:12:24.289Z",
+    "duration": 68132,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "751e70d1-e4ee-44b8-b802-3a74ece27dd9",
+      "uuid": "201356d7-3eeb-4c60-9fdc-08f651a3cf6f",
       "title": "",
       "fullFile": "cypress\\e2e\\add_to_cart_from_recommended_items.cy.js",
       "file": "cypress\\e2e\\add_to_cart_from_recommended_items.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "32a0f791-9222-4d35-af7a-f3e237b7586e",
+          "uuid": "d132721a-6f5e-4c35-8979-eea895816bac",
           "title": "Add to cart from Recommended items",
           "fullFile": "",
           "file": "",
@@ -38,21 +38,21 @@
               "title": "adds a recommended product to cart and verifies",
               "fullTitle": "Add to cart from Recommended items adds a recommended product to cart and verifies",
               "timedOut": null,
-              "duration": 923,
+              "duration": 60579,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
-              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\add_to_cart_from_recommended_items.cy.js\\\\Add to cart from Recommended items -- adds a recommended product to cart and verifies (failed) (3).png\"\n    ]\n  ]\n}",
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"\\\\add_to_cart_from_recommended_items.cy.js\\\\Add to cart from Recommended items -- adds a recommended product to cart and verifies (failed) (4).png\"\n    ]\n  ]\n}",
               "code": "cy.visit('http://automationexercise.com');\n// Scroll to bottom of page\ncy.scrollTo('bottom');\n// Verify 'RECOMMENDED ITEMS' are visible\ncy.contains('recommended items').should('be.visible');\n// Click on 'Add To Cart' on the first Recommended product (adjust selector if needed)\ncy.get('#recommended-item-carousel div > a').first().click({\n  force: true\n}); // Assuming \"Add To Cart\" is next to product title\ncy.wait(2000);\n// Click on 'Continue Shopping' button\ncy.get('#cartModal > div > div > div.modal-footer > button').click({\n  force: true\n});\ncy.wait(1000);\n// Click on 'View Cart' button\ncy.get('.nav a[href=\"/view_cart\"]').click();\n// Verify that product is displayed in cart page and display none\ncy.get('#cart_info_table').should('be.visible').and('not.have.css', 'display', 'none');",
               "err": {
-                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://automationexercise.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND automationexercise.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
-                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttp://automationexercise.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND automationexercise.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (http://localhost:3964/__cypress/runner/cypress_runner.js:131480:74)\n    at visitFailedByErr (http://localhost:3964/__cypress/runner/cypress_runner.js:130878:12)\n    at <unknown> (http://localhost:3964/__cypress/runner/cypress_runner.js:131479:11)\n    at tryCatcher (http://localhost:3964/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (http://localhost:3964/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (http://localhost:3964/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (http://localhost:3964/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (http://localhost:3964/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (http://localhost:3964/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (http://localhost:3964/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (http://localhost:3964/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (http://localhost:3964/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/add_to_cart_from_recommended_items.cy.js:3:11)\n\nFrom Node.js Internals:\n  Error: getaddrinfo ENOTFOUND automationexercise.com\n      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:108:26)",
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://automationexercise.com/__cypress/runner/cypress_runner.js:130511:64)\n    at <unknown> (https://automationexercise.com/__cypress/runner/cypress_runner.js:131497:16)\n    at tryCatcher (https://automationexercise.com/__cypress/runner/cypress_runner.js:1807:23)\n    at <unknown> (https://automationexercise.com/__cypress/runner/cypress_runner.js:4186:41)\n    at tryCatcher (https://automationexercise.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://automationexercise.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://automationexercise.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://automationexercise.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://automationexercise.com/__cypress/runner/cypress_runner.js:1697:18)\n    at _drainQueueStep (https://automationexercise.com/__cypress/runner/cypress_runner.js:2407:12)\n    at _drainQueue (https://automationexercise.com/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://automationexercise.com/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://automationexercise.com/__cypress/runner/cypress_runner.js:2286:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/add_to_cart_from_recommended_items.cy.js:3:11)",
                 "diff": null
               },
-              "uuid": "341162ca-b76a-4ab7-854c-53d5b343686b",
-              "parentUUID": "32a0f791-9222-4d35-af7a-f3e237b7586e",
+              "uuid": "af174b1c-6e58-46e2-bd95-9b0157b810ea",
+              "parentUUID": "d132721a-6f5e-4c35-8979-eea895816bac",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "341162ca-b76a-4ab7-854c-53d5b343686b"
+            "af174b1c-6e58-46e2-bd95-9b0157b810ea"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 923,
+          "duration": 60579,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
