@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.991" tests="1" failures="1">
+  <testsuite name="Root Suite" timestamp="2024-08-02T08:38:02" tests="0" file="cypress\e2e\api\verify_login_with_valid_info.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="API Test: POST To Verify Login with valid details" timestamp="2024-08-02T08:38:02" tests="1" time="0.957" failures="1">
+    <testcase name="API Test: POST To Verify Login with valid details should return user exists message" time="0.000" classname="should return user exists message">
+      <failure message="`cy.request()` failed trying to load:
+
+https://automationexercise.com/api/verifyLogin
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  &gt; Error: getaddrinfo ENOTFOUND automationexercise.com
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: POST
+URL: https://automationexercise.com/api/verifyLogin
+
+-----------------------------------------------------------
+
+Common situations why this would fail:
+  - you don&apos;t have internet access
+  - you forgot to run / boot your web server
+  - your web server isn&apos;t accessible
+  - you have weird network configuration settings on your computer
+
+https://on.cypress.io/request" type="CypressError"><![CDATA[CypressError: `cy.request()` failed trying to load:
+
+https://automationexercise.com/api/verifyLogin
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: getaddrinfo ENOTFOUND automationexercise.com
+
+-----------------------------------------------------------
+
+The request we sent was:
+
+Method: POST
+URL: https://automationexercise.com/api/verifyLogin
+
+-----------------------------------------------------------
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+https://on.cypress.io/request
+    at <unknown> (http://localhost:3184/__cypress/runner/cypress_runner.js:133578:70)
+    at tryCatcher (http://localhost:3184/__cypress/runner/cypress_runner.js:1807:23)
+    at <unknown> (http://localhost:3184/__cypress/runner/cypress_runner.js:4203:37)
+    at tryCatcher (http://localhost:3184/__cypress/runner/cypress_runner.js:1807:23)
+    at Promise._settlePromiseFromHandler (http://localhost:3184/__cypress/runner/cypress_runner.js:1519:31)
+    at Promise._settlePromise (http://localhost:3184/__cypress/runner/cypress_runner.js:1576:18)
+    at Promise._settlePromise0 (http://localhost:3184/__cypress/runner/cypress_runner.js:1621:10)
+    at Promise._settlePromises (http://localhost:3184/__cypress/runner/cypress_runner.js:1697:18)
+    at _drainQueueStep (http://localhost:3184/__cypress/runner/cypress_runner.js:2407:12)
+    at _drainQueue (http://localhost:3184/__cypress/runner/cypress_runner.js:2400:9)
+    at Async._drainQueues (http://localhost:3184/__cypress/runner/cypress_runner.js:2416:5)
+    at Async.drainQueues (http://localhost:3184/__cypress/runner/cypress_runner.js:2286:14)
+From Your Spec Code:
+    at Context.eval (webpack:///./cypress/e2e/api/verify_login_with_valid_info.cy.js:8:11)
+
+From Node.js Internals:
+  RequestError: Error: getaddrinfo ENOTFOUND automationexercise.com
+      at new r (<embedded>:1831:405792)
+      at ee.callback (<embedded>:1831:411793)
+      at e.callback.s.callback [as _callback] (<embedded>:1831:411239)
+      at s._callback.s.callback.s.callback (<embedded>:2049:97858)
+      at ee.emit (node:events:514:28)
+      at ee.onRequestError (<embedded>:2049:106800)
+      at ClientRequest.emit (node:events:526:35)
+      at TLSSocket.socketErrorListener (node:_http_client:501:9)
+      at TLSSocket.emit (node:events:514:28)
+      at emitErrorNT (node:internal/streams/destroy:151:8)
+      at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+      at process.processTicksAndRejections (node:internal/process/task_queues:82:21)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
