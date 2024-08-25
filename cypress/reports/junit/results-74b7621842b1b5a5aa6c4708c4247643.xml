@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.528" tests="7" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-08-24T03:45:48" tests="0" file="cypress\e2e\api\HttpRequest.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="HTTP Request" timestamp="2024-08-24T03:45:48" tests="7" time="4.478" failures="0">
+    <testcase name="HTTP Request GET Call" time="0.169" classname="GET Call">
+    </testcase>
+    <testcase name="HTTP Request POST Call" time="0.419" classname="POST Call">
+    </testcase>
+    <testcase name="HTTP Request PULL Call" time="1.122" classname="PULL Call">
+    </testcase>
+    <testcase name="HTTP Request DELETE Call" time="1.090" classname="DELETE Call">
+    </testcase>
+    <testcase name="HTTP Request GET Call with Headers" time="0.110" classname="GET Call with Headers">
+    </testcase>
+    <testcase name="HTTP Request GET Call with Query Params" time="1.136" classname="GET Call with Query Params">
+    </testcase>
+    <testcase name="HTTP Request GET Call with Basic Auth" time="0.102" classname="GET Call with Basic Auth">
+    </testcase>
+  </testsuite>
+</testsuites>

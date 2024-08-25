@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="11.929" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-08-24T03:43:15" tests="0" file="cypress\e2e\verify_scroll_up_and_down_without_arrow_button.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Verify Scroll Up and Down without Arrow Button" timestamp="2024-08-24T03:43:15" tests="1" time="11.453" failures="0">
+    <testcase name="Verify Scroll Up and Down without Arrow Button should scroll down, verify &quot;SUBSCRIPTION&quot;, scroll up using JavaScript, and verify homepage text" time="5.394" classname="should scroll down, verify &quot;SUBSCRIPTION&quot;, scroll up using JavaScript, and verify homepage text">
+    </testcase>
+  </testsuite>
+</testsuites>
