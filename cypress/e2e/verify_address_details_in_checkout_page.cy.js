@@ -80,7 +80,5 @@ describe('Verify address details in checkout page', () => {
         // Verify 'ACCOUNT DELETED!' and click 'Continue' button
         cy.get('[data-qa="account-deleted"]').contains('Account Deleted!')
         cy.get('[data-qa="continue-button"]').click()
-
-
     });
 });
