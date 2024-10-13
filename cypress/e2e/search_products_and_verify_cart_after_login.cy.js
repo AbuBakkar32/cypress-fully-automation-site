@@ -54,6 +54,8 @@ describe('Search Products and Verify Cart After Login', () => {
         cy.get('#cart_info_table > tbody > tr').should('have.visible');
 
         // to get the verification number number and check the visibility of product
+        // Product can't not be visible if you cannot add your product on your add to cart menu
+
         cy.get('#cart_info_table_list_product > tobody > tr').should('have.visible')
         cy.contains('Product are available').should('be.visible')
 
@@ -65,7 +67,7 @@ describe('Search Products and Verify Cart After Login', () => {
         console.log(productList)
 
         const productList1 = Array.from({length: 100}, (_, i) => i);
-        console.log(productList);
+        console.log(productList1);
 
     });
 });
