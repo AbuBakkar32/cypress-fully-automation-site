@@ -1,6 +1,24 @@
 # cypress-fully-automation-site
 
-This is a automationexercise website that is used for the automation test for this site.
+## Introduction
+This project contains a comprehensive suite of automated tests for the website https://automationexercise.com.
+These tests are developed using Cypress, a next-generation front-end testing tool built for the modern web.
+The aim is to ensure the quality and functionality of the automationexercise website through robust and reliable automated testing.
+
+## Features
+
+* **Robust End-to-End Testing**: Ensure application stability with comprehensive automated test scenarios covering all critical user flows.
+* **Extensive Test Coverage**: Validate diverse application aspects, including UI interactions, form submissions, API integrations, and data integrity.
+* **Quick Start & Easy Configuration**: Effortlessly set up the testing environment with straightforward instructions and a clear project structure.
+* **Highly Customizable Tests**: Adapt and extend test scripts to meet specific application needs using Cypress's powerful and flexible API.
+* **Seamless CI/CD Integration**: Automate your testing pipeline by integrating with popular Continuous Integration and Continuous Delivery platforms.
+
+## Prerequisites
+
+To run this project, you will need the following installed on your system:
+
+*   **Node.js**: A recent LTS version is recommended (e.g., 18.x or 20.x). You can download it from [https://nodejs.org/](https://nodejs.org/).
+*   **npm**: Node Package Manager, which typically comes bundled with Node.js.
 
 ## Installation
 
@@ -12,23 +30,30 @@ npm install
 
 ## Usage
 
-To run the test, run the following command
+### Local Execution
 
+To run the tests headlessly in your local environment:
 ```bash
 npm run cy:run
 ```
 
-To open the test in browser, run the following command
-
+To open the Cypress Test Runner UI and run tests interactively:
 ```bash
 npm run cy:open
 ```
 
-To run cypress cloud, run the following command
+### Cypress Cloud Execution
 
+To run tests and record the results on Cypress Cloud using the pre-configured script (if available and correctly set up with a record key):
 ```bash
-npm run cy:run:cloud
+npm run cy:cloud
 ```
+
+Alternatively, to run tests on Cypress Cloud with a specific record key, use the following command. Replace `YOUR_RECORD_KEY` with your actual Cypress Cloud record key:
+```bash
+npx cypress run --record --key YOUR_RECORD_KEY
+```
+Note: The `cy:cloud` script in `package.json` may contain a hardcoded record key. It's recommended to use the command above with your own key for security and clarity.
 
 ![demo3.png](reports%2Fdemo3.png)
 
@@ -36,60 +61,87 @@ npm run cy:run:cloud
 
 ![demo1.png](reports%2Fdemo1.png)
 
-## Features:
+## Test Cases
 
-* **End-to-End Testing**: Automate your end-to-end testing scenarios to ensure the robustness of your web application.
-* **Comprehensive Test Coverage**: Cover various aspects of your application, including UI interactions, form
-  submissions, API calls, and more.
-* **Easy Setup**: Get started quickly with simple setup instructions and an intuitive directory structure.
-* **Customizable Tests**: Tailor the tests according to your application's requirements using Cypress's flexible testing
-  capabilities.
-* **Continuous Integration**: Integrate seamlessly with popular **CI/CD** platforms to automate testing workflows.
+This project includes the following automated test cases:
 
-# Test Cases List
-
-1. Register User
-2. Login User with correct email and password
-3. Login User with incorrect email and password
-4. Logout User
-5. Register User with existing email
-6. Contact Us Form
-7. Verify Test Cases Page
-8. Verify All Products and product detail page
-9. Search Product
-10. Verify Subscription in home page
-11. Verify Subscription in Cart page
-12. Add Products in Cart
-13. Verify Product quantity in Cart
-14. Place Order: Register while Checkout
-15. Place Order: Register before Checkout
-16. Place Order: Login before Checkout
-17. Remove Products From Cart
-18. View Category Products
-19. View & Cart Brand Products
-20. Search Products and Verify Cart After Login
-21. Add review on product
-22. Add to cart from Recommended items
-23. Verify address details in checkout page
-24. Download Invoice after purchase order
-25. Verify Scroll Up using 'Arrow' button and Scroll Down functionality
-26. Verify Scroll Up without 'Arrow' button and Scroll Down functionality
+1.  Register user.
+2.  Login user with correct email and password.
+3.  Login user with incorrect email and password.
+4.  Logout user.
+5.  Register user with existing email.
+6.  Contact us form.
+7.  Verify test cases page.
+8.  Verify all products and product detail page.
+9.  Search product.
+10. Verify subscription in home page.
+11. Verify subscription in cart page.
+12. Add products in cart.
+13. Verify product quantity in cart.
+14. Place order: Register while checkout.
+15. Place order: Register before checkout.
+16. Place order: Login before checkout.
+17. Remove products from cart.
+18. View category products.
+19. View & cart brand products.
+20. Search products and verify cart after login.
+21. Add review on product.
+22. Add to cart from recommended items.
+23. Verify address details in checkout page.
+24. Download invoice after purchase order.
+25. Verify scroll up using 'Arrow' button and scroll down functionality.
+26. Verify scroll up without 'Arrow' button and scroll down functionality.
 
 ## Folder Structure
 
-1. fixtures: Contains the test data
-2. e2e: Contains the test files
-3. support: Contains the custom commands and other support files
-4. screenshot: Contains the screenshot of the failed test cases
-5. videos: Contains the video of the test cases
-6. reports: Contains the reports of the test cases
+This project follows a standard Cypress project structure. Key directories include:
+
+*   `cypress/`: The main directory for all test-related files.
+    *   `cypress/e2e/`: Contains all end-to-end test script files (e.g., `.cy.js`).
+    *   `cypress/fixtures/`: Stores static test data, like JSON files, that can be used by your tests.
+    *   `cypress/support/`: Holds reusable custom commands (`commands.js`) and global configurations (`e2e.js`).
+    *   `cypress/screenshots/`: Automatically stores screenshots taken during test execution, typically on failure or when manually triggered.
+    *   `cypress/downloads/`: Stores files downloaded as part of test scenarios.
+*   `mochawesome-report/`: Contains the detailed HTML test execution reports generated by the Mochawesome reporter.
+*   `reports/`: Contains project-related images and documents (e.g., demo images, PDFs).
+*   `.nyc_output/`: Stores code coverage reports generated when tests are run with coverage tracking.
+*   `.github/`: Contains GitHub Actions workflow configurations (e.g., for CI/CD) and issue templates.
 
 ## Cypress Dashboard
 
 The test cases are also available in the cypress dashboard. The link
 is [here](https://dashboard.cypress.io/projects/5r89t6/runs)
 
-## Resources:
+## Contributing
+
+We welcome contributions to the `cypress-fully-automation-site` project! Whether you're fixing a bug, adding a new test case, or improving documentation, your help is appreciated.
+
+Before contributing, please take a moment to review our **[Code of Conduct](CODE_OF_CONDUCT.md)**.
+
+### Reporting Bugs and Suggesting Enhancements
+
+If you encounter a bug or have an idea for a new feature or enhancement, please check the [GitHub Issues](https://github.com/AbuBakkar32/cypress-fully-automation-site/issues) page to see if it has already been reported.
+If not, please open a new issue. We have templates to help you:
+*   Use the **Bug report** template for reporting issues.
+*   Use the **Feature request** template (or `custom.md`) for suggesting new features or enhancements.
+
+### Submitting Pull Requests
+
+1.  **Fork** the repository to your own GitHub account.
+2.  Create a new **branch** from `main` for your changes (e.g., `git checkout -b feature/your-feature-name` or `bugfix/issue-description`).
+3.  Make your **changes** and **commit** them with clear and descriptive messages.
+4.  Ensure your changes do not break existing functionality. If you're adding new features, please include or update **tests** as appropriate.
+5.  **Push** your changes to your forked repository.
+6.  Open a **Pull Request (PR)** against the `main` branch of this repository.
+7.  Clearly describe the purpose and changes of your PR. Link to any relevant issues.
+
+We'll review your PR as soon as possible. Thank you for your contribution!
+
+## License
+
+This project is licensed under the **[Apache License 2.0](LICENSE)**.
+
+## Resources
 
 1. [Cypress Documentation](https://docs.cypress.io/guides/overview/why-cypress): Explore Cypress's official
    documentation for in-depth guides and examples.
@@ -97,29 +149,3 @@ is [here](https://dashboard.cypress.io/projects/5r89t6/runs)
    efficient and maintainable Cypress tests.
 3. [GitHub Repository](https://github.com/cypress-io): Fork and star the repository to stay updated with the latest
    developments.
-
-## Apache License
-
-This project is licensed under the Apache License - see
-the ([LICENSE](https://github.com/AbuBakkar32/cypress-fully-automation-site/blob/main/LICENSE)) file for details.
-
-2. Create a new job
-3. Add the following commands to the job:
-
-## Run Project In Cypress Cloud
-
-```bash
-npm install
-npm cypress run --record --key [Sceret Key]
-```
-
-
-
-
-
-
-
-
-
-
-
